@@ -13,6 +13,4 @@
 
 # 06_Data_Structure.ipynb
 - 리스트(list)
-  ㄴ 인덱싱, 슬라이싱, 연산자, 수정 및 삭제, 리스트 함수(append(),extend(),inplace(),pop(),insert(),index(),reverse(),sort(),sorted())
-- 시퀀스(sequence)
-- 딕셔너리(dictionary) 
+  ㄴ 인덱싱, 슬라이싱, 연산자, 수정 및 삭제, 리스트 함수(append(),extend(),inplace(),pop(),insert(),index(),reverse(),sort(),sorted(), count(), len())
