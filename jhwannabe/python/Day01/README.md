@@ -33,8 +33,6 @@
 python -m venv myvenv
 가상환경 실행myvenv\Scripts\activate
 
-
-<<<<<<< HEAD:jhwannabe/python/Day01/day1.md
 # pip (라이브러리를 설치해주는 패키지)
 pip list : 라이브러리 버전 확인
 
@@ -46,4 +44,4 @@ pip list : 라이브러리 버전 확인
 =======
 ### pip (라이브러리를 설치해주는 패키지)
 pip list : 라이브러리 버전 확인
->>>>>>> 82ff96d5849fa8db6933d3244fe7e43b2ed0c924:jhwannabe/python/Day01/파이썬 개요.md
+
