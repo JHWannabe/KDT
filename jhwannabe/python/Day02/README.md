@@ -12,5 +12,5 @@
 - find(), index(), replace(), upper(), lower(), strip(), join()
 
 # 06_Data_Structure.ipynb
-- 리스트(list)
+- 리스트(list)  
   ㄴ 인덱싱, 슬라이싱, 연산자, 수정 및 삭제, 리스트 함수(append(),extend(),inplace(),pop(),insert(),index(),reverse(),sort(),sorted(), count(), len())
