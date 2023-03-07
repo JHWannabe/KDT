@@ -1,3 +1,9 @@
+# 01_GoogleColab.ipynb
+- 쉘의 종류, 이미지와 영상 표현하기
+
+# 02_print.ipynb
+- 출력서식, .format() 함수 사용법
+
 # 파이썬?
 프로그램을 입문하기 위한 학습용 프로그램으로 시작
 
@@ -35,13 +41,3 @@ python -m venv myvenv
 
 # pip (라이브러리를 설치해주는 패키지)
 pip list : 라이브러리 버전 확인
-
-# 01_GoogleColab.ipynb
-- 쉘의 종류, 이미지와 영상 표현하기
-
-# 02_print.ipynb
-- 출력서식, .format() 함수 사용법
-=======
-### pip (라이브러리를 설치해주는 패키지)
-pip list : 라이브러리 버전 확인
-
