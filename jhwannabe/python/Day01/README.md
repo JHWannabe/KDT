@@ -36,8 +36,8 @@
 ### venv
 - 가상환경을 생성하는 명령어
 
-python -m venv myvenv
-가상환경 실행myvenv\Scripts\activate
+- python -m venv myvenv
+- 가상환경 실행myvenv\Scripts\activate
 
 # pip (라이브러리를 설치해주는 패키지)
 pip list : 라이브러리 버전 확인
