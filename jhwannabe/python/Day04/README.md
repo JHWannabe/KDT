@@ -7,4 +7,6 @@
 - 반복문을 이용한 딕셔너리 활용
 
 # 11_Set_DS.ipynb
--
+- set 만들기
+- set 함수  
+  ㄴ add, remove, discard, copy, id
