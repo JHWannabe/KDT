@@ -10,3 +10,9 @@
 - set 만들기
 - set 함수  
   ㄴ add, remove, discard, copy, id
+- set의 연산자
+- Set과 zip()함수
+
+# 12_User_Defined_Functuon.ipynb
+- 이름만 있는 함수
+- 매개변수가 있는 함수
