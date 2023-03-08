@@ -17,10 +17,17 @@
 
 # 09_Control_Statement(Repeating).ipynb
 - 반복문
-- 자료형 참/거짓 판단하기
-- 대입 연산자
-- While 문
-- 문제 1, 문제 2
-- For 문
-- 문제 3
-- enumerate
+    - 자료형 참/거짓 판단하기
+    - 대입 연산자
+    - While 문
+    - 문제 1, 문제 2
+    - For 문
+    - 문제 3
+    - enumerate
+    - zip()
+    - list와 tuple을 for문과 함께 사용하기
+    - 문제 4
+- 다중 반복문
+    - 문제 1, 문제 2
+    - 구구단 출력
+    - 문제 3, 문제 4
