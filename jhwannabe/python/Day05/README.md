@@ -9,4 +9,12 @@
     - 람다가 유용하게 사용되는 대표적인 함수(filter(), map())
 
 # 15_Random_Module.ipynb
-- 
+- 랜덤(random) 모듈
+    - random()
+    - randrange()
+    - shuffle()
+    - choice()
+- 과제 1,2,3,4
+
+# 16_Objected_Oriented_Class.ipynb
+- 객체지향 프로그래밍
