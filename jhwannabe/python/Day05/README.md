@@ -7,3 +7,6 @@
 - 콜백 함수
 - 람다 함수
     - 람다가 유용하게 사용되는 대표적인 함수(filter(), map())
+
+# 15_Random_Module.ipynb
+- 
