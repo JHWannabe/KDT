@@ -9,3 +9,22 @@
 
 # 21_File_IO.ipynb
 - 파일 열기
+    - 파일 저장하기
+    - 파일 경로
+    - 파일 읽어오기
+    - 문제
+    - with문
+    - readline()
+    - readlines()
+- 인코딩과 디코딩
+    - 인코딩(Encoding)
+    - 디코딩(Decoding)
+
+# 22_Closure_Decorator.ipynb
+- 클로저(Closure)
+- 데코레이터(Decorator)
+
+# 23_Type_of_Variable(Annotation).ipynb
+- 변수 타입 어노테이션
+    - 타입 어노테이션(Type Annotation)
+    - 동적 프로그래밍 언어의 장단점
