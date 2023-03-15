@@ -5,7 +5,7 @@
 - SQL(Structed Query Language)
 - MySQL 설치
 
-# 01_basic_sql
+# 01_basic_sql.sql
 - 테이블, 스키마
 - 데이터 타입(숫자형, 문자형, 이진 데이터형, 날자형)
 - 제약조건(constraint)
