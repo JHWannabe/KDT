@@ -1,1 +1,1 @@
-* Day09 : DBMS 설명, MySQL 설치, 변수 타입
+* Day09 : DBMS 설명, MySQL 설치, 데이터타입, DB CRUD, TABLE CRUD, DATA CRUD
