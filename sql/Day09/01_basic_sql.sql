@@ -200,14 +200,13 @@ select * from member;
 delete from member where userid = 'apple'; # userid가 'apple'인 사용자를 삭제 (apple 전체행 삭제)
 delete from member where gender = '남자';
 
-delete from member; #Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  
-#To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
-#safe모드 풀기
+delete from member; # Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  
+# To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+# safe모드 풀기
 
 # 데이터 수정하기
 # update 테이블명 set 필드명1= 값1, 필드명2=값2... # 결과 전체 필드 값이 바뀜
 # update 테이블명 set 필드명1= 값1, 필드명2=값2... where 조건절; # 조건만 바꿈
-
 update member set point = 100; #전체 포인트 100점 추가
 update member set point = point+300 where gender='여자';  #inplace연산(point = 300은 300으로 바뀌니까)
 
