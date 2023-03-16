@@ -78,7 +78,7 @@ select userid, username from member where userid like '%app%'; -- app이 들어�
 select userid, username from member where userid like 'app__'; -- app으로 시작하는 5글자인 문자열
 
 # 정렬
-# select 필드명1, 필드명2, .. from 테이블명 order by 정렬할 필드명 [asc, desc];
+# select 필드명1, 필드명2, .. from 테이블명 order by 1순위 정렬할 필드명 [asc, desc], 2순위 정렬할 필드명 [asc, desc];
 select userid, username, point from member order by userid; # 기본값: 오름차순
 select userid, username, point from member order by userid asc; # 아이디로 오름차순
 select userid, username, point from member order by userid desc; # 아이디로 내름차순
@@ -88,4 +88,56 @@ select userid, username, point from member order by point desc, userid desc;
 # 조건절 + 정렬
 # select 필드명1, 필드명2, .. from 테이블명 where 조건절 order by 정렬할 필드명 [asc, desc];
 # 성별이 여성인 회원을 point가 많은순으로 정렬(단, 포인트가 같을 경우 머저 가입한 순으로 정렬)
-select userid, username, point from member where gender='여자' order by point desc, regdate;
+select userid, username, point, regdate from member where gender='여자' order by point desc, regdate;
+
+# limit
+# select 필드명1, 필드명2, .. from 테이블명 limit 가져올 행의 갯수;
+# select 필드명1, 필드명2, .. from 테이블명 limit 시작행, 가져올 행의 갯수;
+select * from member;
+select userid, username, gender from member limit 3;
+select userid, username, gender from member limit 3, 2; # 인덱스 3행부터 2개의 행을 가져옴
+
+# 정렬 + limit
+# select 필드명1, 필드명2, .. from 테이블명 order by 정렬할 필드명 [asc, desc] limit 가져올 행의 갯수;
+select userid, username, point from member order by point desc limit 3;
+
+# 집계 함수
+# count: 행의 갯수를 세는 함수
+# 전체인원을 알고 싶다!: primary key가 적용되어 null이 포함될 수 없음
+select count(userid) as 전체인원 from member; # 5
+# 주소를 입력한 인원을 알고 싶다!: null이 있으면 주소를 입력하지 않았음
+select count(zipcode) as 우편번호 from member; # 1, null을 제외하고 갯수를 셈
+
+# sum: 행 값을 더함
+select sum(point) as 포인트합 from member; # 1000
+select userid, sum(point) as 포인트합 from member; # Error Code: 1140. In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'kdt.member.userid'; this is incompatible with sql_mode=only_full_group_by
+
+# avg: 행 값의 평균을 구함
+select avg(point) as 평균 from member;
+
+# min: 행의 최소값을 구함
+select min(point) as 최소값 from member;
+
+# max: 행의 최대값을 구함
+select max(point) as 최대값 from member;
+
+# 그룹
+# select 그룹을 맺은 컬럼 또는 집계함수 from 테이블명 group by 그룹을 맺을 필드명;
+select gender from member group by gender;
+select gender, sum(point) as 합계 from member group by gender;
+select gender, avg(point) as 평균 from member group by gender;
+select gender, count(userid) as 인원수 from member group by gender;
+
+# 그룹 + 조건
+# select 그룹을 맺은 컬럼 또는 집계함수 from 테이블명 group by 그룹을 맺을 필드명 having 조건절;
+select gender from member group by gender having gender = '여자';
+
+# 로우 추가
+insert into member (userid, username, userpw, gender, email, ssn1) value ('berry', '배애리', '6789', '여자','berry@berry.com', '900101');
+
+# 조건절 + 그룹 + 그룹조건 + 정렬
+# select 그룹을 맺은 컬럼 또는 집계함수 from 테이블명 where 조건절 group by 그룹을 맺을 필드명 having 조건절 order by 정렬할 필드명 [asc, desc];
+# 문제1
+# 포인트가 0이 아닌 회원 중에서 남, 여로 그룹을 나눠 포인트의 평균을 구하고
+# 평균 포인트가 100 이상인 성별을 검색하여 포인트로 내림차순 정렬
+select gender, avg(point) as avg from member where point > 0 group by gender having avg >= 100 order by avg desc;
