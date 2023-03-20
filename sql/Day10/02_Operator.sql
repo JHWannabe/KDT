@@ -70,6 +70,10 @@ select * from member;
 select userid, username, point from member where point between 300 and 600;
 select userid, username, point from member where point >= 300 and point <= 600;
 
+# in
+# 포인트가 300, 400인 회원을 모두 출력
+select userid, username, point from member where point in (300, 400);
+
 # like
 select userid, username from member where userid like 'a%'; -- a로 시작하는 문자열
 select userid, username from member where userid like '%a'; -- a로 끝나는 문자열
