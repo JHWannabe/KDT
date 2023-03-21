@@ -6,4 +6,7 @@
 * Day01 ~ Day08
 
 ## SQL
-* Day09 ~
+* Day09 ~ Day13
+
+## Python 응용
+* Day13 ~ Day
