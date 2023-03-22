@@ -9,4 +9,4 @@
 * Day09 ~ Day13
 
 ## Python 응용
-* Day13 ~ Day
+* Day13 ~ Day14
