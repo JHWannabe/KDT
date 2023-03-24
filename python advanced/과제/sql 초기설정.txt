@@ -1,0 +1,41 @@
+create database hw;
+use hw;
+desc movie;
+
+create table movie(
+ 	mv_num int auto_increment primary key,
+	mv_name varchar(50),
+    mv_genre varchar(30),
+    mv_time varchar(10),
+    mv_theater varchar(30)
+);
+
+
+create table user(
+	user_num int auto_increment primary key,
+	user_id varchar(20) unique,
+    user_pw varchar(10) not null,
+    user_name varchar(10) not null,
+    user_hp varchar(20) unique,
+    user_nickname varchar(20) unique,
+    user_part varchar(20) not null
+);
+
+create table reservation(
+	res_num int auto_increment primary key,
+    res_hp int,
+    res_mv_name varchar(50),
+    res_mv_time varchar(10),
+    res_mv_theater varchar(30),
+    res_seat varchar(10),
+    res_time datetime default now()
+);
+
+
+select * from movie;
+select * from reservation;
+
+
+drop table reservation;
+
+drop table movie;
