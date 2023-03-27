@@ -92,27 +92,27 @@
 - div>div>div>div>div>... 끝없는 div를 탐색하는 것보다 효율적
 - 개발자에게 명확한 의미를 전달
 
-* <header> </header>
+#### <header> </header>
 - 페이지의 제목과 같은 소개 내용을 포함
 - heading 태그나 로고, 검색양식, 작성자 이름 등을 포함
 
-* <nav> </nav>
+#### <nav> </nav>
 - 메뉴, 목차 등에 용용
 
-* <main> </main>
+#### <main> </main>
 - 지배적인 컨텐츠 영역을 나타내는 태그
 
-* <section> </section>
+#### <section> </section>
 - 구체적인 시맨틱 태그가 없는 문서의 독립적인 영역을 나타냄
 - 섹션에는 항상 제목이 잇는 것이 일반적
 
-* <article> </article>
+#### <article> </article>
 - 자체로 의미가 있는 웹페이지 부분이며, 독립적으로 배포 또는 재사용되도록 의도된 문서
 - 게시물, 잡지, 블로그 또는 신문기사
 
-* <footer> </footer>
+#### <footer> </footer>
 - 작성자에 대한 정보, 저작권 데이터 또는 관련 문서에 대한 링크, 카피라이트 등을 포함
 
-* <aside> </aside>
+#### <aside> </aside>
 - 간접적으로 문서와 관련된 내용
 - 사이드 바
