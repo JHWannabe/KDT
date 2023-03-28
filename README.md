@@ -12,4 +12,7 @@
 * Day13 ~ Day14
 
 ## HTML
-* Day15 ~
+* Day15 ~ Day17
+
+## CSS
+* Day18 ~ Day20
