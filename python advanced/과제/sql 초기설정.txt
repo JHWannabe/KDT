@@ -10,17 +10,6 @@ create table movie(
     mv_theater varchar(30)
 );
 
-
-create table user(
-	user_num int auto_increment primary key,
-	user_id varchar(20) unique,
-    user_pw varchar(10) not null,
-    user_name varchar(10) not null,
-    user_hp varchar(20) unique,
-    user_nickname varchar(20) unique,
-    user_part varchar(20) not null
-);
-
 create table reservation(
 	res_num int auto_increment primary key,
     res_hp int,
@@ -31,11 +20,20 @@ create table reservation(
     res_time datetime default now()
 );
 
-
 select * from movie;
 select * from reservation;
 
+INSERT INTO `hw`.`movie` (`mv_num`, `mv_name`, `mv_genre`, `mv_time`, `mv_theater`) VALUES ('1', '유령', '액션', '12:00', '2관');
+INSERT INTO `hw`.`movie` (`mv_num`, `mv_name`, `mv_genre`, `mv_time`, `mv_theater`) VALUES ('4', '7번방의 선물', '패밀리', '19:20', '4관');
+INSERT INTO `hw`.`movie` (`mv_num`, `mv_name`, `mv_genre`, `mv_time`, `mv_theater`) VALUES ('6', '컨저링', '공포', '22:25', '3관');
+INSERT INTO `hw`.`movie` (`mv_num`, `mv_name`, `mv_genre`, `mv_time`, `mv_theater`) VALUES ('7', '영웅', '뮤지컬', '10:30', '3관');
+INSERT INTO `hw`.`movie` (`mv_num`, `mv_name`, `mv_genre`, `mv_time`, `mv_theater`) VALUES ('9', '영웅', '뮤지컬', '15:30', '1관');
+INSERT INTO `hw`.`movie` (`mv_num`, `mv_name`, `mv_genre`, `mv_time`, `mv_theater`) VALUES ('10', '스즈메의 문단속', '애니메이션', '20:00', '2관');
 
-drop table reservation;
-
-drop table movie;
+INSERT INTO `hw`.`reservation` (`res_num`, `res_hp`, `res_mv_name`, `res_mv_time`, `res_mv_theater`, `res_seat`, `res_time`) VALUES ('2', '1111', '영웅', '15:30', '1관', 'A5', '2023-03-23 16:56:14');
+INSERT INTO `hw`.`reservation` (`res_num`, `res_hp`, `res_mv_name`, `res_mv_time`, `res_mv_theater`, `res_seat`, `res_time`) VALUES ('3', '1111', '영웅', '15:30', '1관', 'A6', '2023-03-23 16:56:20');
+INSERT INTO `hw`.`reservation` (`res_num`, `res_hp`, `res_mv_name`, `res_mv_time`, `res_mv_theater`, `res_seat`, `res_time`) VALUES ('4', '1234', '7번방의 선물', '19:20', '4관', 'B7', '2023-03-23 17:21:20');
+INSERT INTO `hw`.`reservation` (`res_num`, `res_hp`, `res_mv_name`, `res_mv_time`, `res_mv_theater`, `res_seat`, `res_time`) VALUES ('5', '1234', '7번방의 선물', '19:20', '4관', 'B8', '2023-03-23 17:21:23');
+INSERT INTO `hw`.`reservation` (`res_num`, `res_hp`, `res_mv_name`, `res_mv_time`, `res_mv_theater`, `res_seat`, `res_time`) VALUES ('6', '1234', '7번방의 선물', '19:20', '4관', 'B9', '2023-03-23 17:21:25');
+INSERT INTO `hw`.`reservation` (`res_num`, `res_hp`, `res_mv_name`, `res_mv_time`, `res_mv_theater`, `res_seat`, `res_time`) VALUES ('7', '2222', '유령', '12:00', '2관', 'D5', '2023-03-27 12:30:24');
+INSERT INTO `hw`.`reservation` (`res_num`, `res_hp`, `res_mv_name`, `res_mv_time`, `res_mv_theater`, `res_seat`, `res_time`) VALUES ('11', '2222', '유령', '12:00', '2관', 'F9', '2023-03-27 12:45:31');
