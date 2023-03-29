@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <title>Sticky</title>
+    <style>
+        html, body {margin: 0; padding: 0;}
+        .header {
+            height: 80px;
+            background-color: mediumaquamarine;
+        }
+        .container {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .content {
+            box-sizing: border-box;
+            width: 80%;
+            height: 800px;
+            background-color: deepskyblue;
+        }
+        .sidebar {
+            position: sticky;
+            box-sizing: border-box;
+            width: 20%;
+            background-color: deeppink;
+            height: 400px;
+            top: 0; /* 상위 부모 컨테이너의 가장 상단에서부터 적용 */
+        }
+        .footer {
+            background-color: yellowgreen;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">헤더</header>
+    <main class="container">
+        <section class="content">메인 컨텐츠</section>
+        <aside class="sidebar">Sticky 적용하기</aside>
+    </main>
+    <footer class="footer">푸터</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>상대 위치 지정방식</title>
+    <style>
+        div {
+            width: 200px;
+            padding: 20px;
+        }
+        .relative1 {
+            background-color: deeppink;
+        }
+        .relative2 {
+            position: relative;
+            /*절대 위치 지정 방식 (원래 있던 곳에서부터!)*/
+            background-color: deepskyblue;
+            left: 200px;
+            top: 100px
+        }
+        .relative3 {
+            position: relative;
+            background-color: gold;
+            right: 100px;
+            bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>상대위치지정방식</h2>
+    <div class="relative1">상대 위치 지정 방식1</div>
+    <div class="relative2">상대 위치 지정 방식2</div>
+    <div class="relative3">상대 위치 지정 방식3</div>
+</body>
+</html>
