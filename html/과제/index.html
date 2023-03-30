@@ -7,16 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>최초의 내 사이트</title>
     <style>
-        h1 {
-            text-align: center;
+        body {
+            background-color: bisque;
         }
 
         div {
-            text-align: center
+            border: 2px solid black;
+        }
+
+        .header {
+            width: 1000px;
+            height: 100px;
+            background-image: url('images/banner.jpg');
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #content {
+            padding: 10px;
+            float: left;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .logininfo {
+            padding: 20px 10px 0;
+            float: left;
+            border: 2px solid black;
+            margin-right: 15px;
+            text-align: center;
         }
 
         p {
             font-size: 24px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
         }
 
         a:link {
@@ -42,11 +72,17 @@
 </head>
 
 <body>
-    <h1>전장훈 홈페이지</h1>
-    <div>
-        <p><img src="images/profile.png" alt="profile"></p>
+    <div id="container"></div>
+    <div class="header">
+        <h1>전장훈 홈페이지</h1>
+    </div>
 
-        <br><br>
+    <div class="logininfo">
+        <span>login 정보</span>
+        <p><img src="images/profile.png" alt="profile"></p>
+        <a href="register.html"><button value="회원가입"></a>
+    </div>
+    <div id="content">
         <h2>2023-03-27</h2>
         <a href="resume.html">
             <p>이력서</p><img src="images/simson.jpg" width="300">
@@ -55,9 +91,11 @@
         <br><br>
         <h2>2023-03-28</h2>
 
-        <a href="article.html"><p>관심있는 뉴스기사</p><img
+        <a href="article.html">
+            <p>관심있는 뉴스기사</p><img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRVLFPkaQdy9i130dq2qlckOZJ2U1jmz1liw&usqp=CAU"
-                alt="뉴스 기사" width="300"></a>
+                alt="뉴스 기사" width="300">
+        </a>
 
         <br><br>
 
@@ -70,16 +108,19 @@
 
         <br>
 
-        <a href="https://www.youtube.com/@tripway111"><img src="images/youtube1.PNG"  width="300" height="100" margin="0 40px"></a>
+        <a href="https://www.youtube.com/@tripway111"><img src="images/youtube1.PNG" width="300" height="100"
+                margin="0 40px"></a>
 
-        <a href="https://music.youtube.com/"><img src="images/youtubemusic.PNG"  width="300" height="100" margin="0 40px"></a>
+        <a href="https://music.youtube.com/"><img src="images/youtubemusic.PNG" width="300" height="100"
+                margin="0 40px"></a>
 
         <h2>회원 가입</h2>
-        <a href="register.html"><img src="https://mblogthumb-phinf.pstatic.net/MjAxODAyMDdfMjcx/MDAxNTE3OTkxNTc3NzMw.bm0fV1sOWAodGj9p7WuSN6sqgrodQVOdIDomSOY3WPcg.nceQVP47LBUlyjqzibMQOQHyv_4ygdPosBUOMqZmH8sg.JPEG.starsky22/IMG_5160.jpg?type=w800" width="300"></a>
+        <a href="register.html"><img
+                src="https://mblogthumb-phinf.pstatic.net/MjAxODAyMDdfMjcx/MDAxNTE3OTkxNTc3NzMw.bm0fV1sOWAodGj9p7WuSN6sqgrodQVOdIDomSOY3WPcg.nceQVP47LBUlyjqzibMQOQHyv_4ygdPosBUOMqZmH8sg.JPEG.starsky22/IMG_5160.jpg?type=w800"
+                width="300"></a>
 
-        <h2 >로그인</h2>
+        <h2>로그인</h2>
         <a href="login.html"><img src="https://t1.daumcdn.net/cfile/tistory/99225F425D302AF90D" width="300"></a>
-
     </div>
 </body>
 
