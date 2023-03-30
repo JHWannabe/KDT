@@ -1,0 +1,34 @@
+body {
+    margin: 20px 30px;
+    max-width: 1000px;
+}
+
+div {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.header {
+    height: 100px;
+    background-color: burlywood;
+}
+
+.content {
+    width: 68%;
+    height: 800px;
+    float: left;
+    background-color: blanchedalmond;
+}
+
+.sidebar {
+    width: 25%;
+    float: right;
+    background-color: lightgoldenrodyellow;
+}
+
+.footer {
+    clear: both;
+    height: 150px;
+    background-color: aquamarine;
+}
