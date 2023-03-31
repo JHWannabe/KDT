@@ -1,3 +1,4 @@
-* Day18 : CSS, Style(인라인, 내부, 외부), 선택자(전체, 요소, 상속, 아이디, 클래스, 그룹, 자식_자손, 형제, 속성, 가상)
-* Day19 : CSS 배경, 박스 모델(Box Model), CSS 디스플레이, CSS 폼, CSS Position
-* Day20 : 다단 레이아웃, Flex 레이아웃, flex-wrap, flex-direction, flex-flow, justify content, align-items, align-self, order, align-content, flex-basis, flex-grow, flex-shrink, 미디어 쿼리, 솔로의 식탁
+- Day18 : CSS, Style(인라인, 내부, 외부), 선택자(전체, 요소, 상속, 아이디, 클래스, 그룹, 자식\_자손, 형제, 속성, 가상)
+- Day19 : CSS 배경, 박스 모델(Box Model), CSS 디스플레이, CSS 폼, CSS Position
+- Day20 : 다단 레이아웃, Flex 레이아웃, flex-wrap, flex-direction, flex-flow, justify content, align-items, align-self, order, align-content, flex-basis, flex-grow, flex-shrink, 미디어 쿼리, 솔로의 식탁
+- Day21: 데이터베이스 테스트
