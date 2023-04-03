@@ -22,4 +22,8 @@
 
 ## CSS
 
-- Day18 ~ Day21
+- Day18 ~ Day22
+
+## JavaScript
+
+- Day23 ~
