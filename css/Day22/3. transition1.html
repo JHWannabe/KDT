@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Transition1</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 30px;
+        }
+
+        #bg-tr {
+            background-color: gold;
+            transition: background-color ease 2s;
+        }
+
+        #bg-tr:hover {
+            background-color: red;
+        }
+
+        #border-tr {
+            background-color: aqua;
+            border: 3px dotted black;
+            transition: all linear 2s;
+        }
+
+        #border-tr:hover {
+            background-color: pink;
+            border: 3px dotted darkgray;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>transition1</h2>
+    <div id="bg-tr"></div>
+    <div id="border-tr"></div>
+</body>
+
+</html>
