@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Flex 레이아웃2</title>
     <style>
@@ -9,33 +10,53 @@
             margin: 0 auto;
             border: 3px solid purple;
         }
+
         .wrapper div {
             width: 50px;
             border: 2px solid black;
             background-color: aquamarine;
         }
+
         #container {
             display: flex;
-            justify-content: flex-start; /* 기본값 */
-            justify-content: flex-end;
+            justify-content: flex-start;
+            /* 기본값 */
+            /* justify-content: flex-end;
             justify-content: center;
             justify-content: space-between;
-            justify-content: space-around;
+            justify-content: space-around; */
 
-            align-items: stretch; /* 기본값 */
-            align-items: start;
+            align-items: stretch;
+            /* 기본값 */
+            /* align-items: start;
             align-items: end;
             align-items: center;
-            align-items: baseline;
+            align-items: baseline; */
         }
 
-        #box2 {align-self: flex-end;}
+        #box2 {
+            align-self: flex-end;
+        }
 
-        #box1 {order: 5;}
-        #box2 {order: 3;}
-        #box3 {order: 2;}
-        #box4 {order: 1;}
-        #box5 {order: 4;}
+        #box1 {
+            order: 5;
+        }
+
+        #box2 {
+            order: 3;
+        }
+
+        #box3 {
+            order: 2;
+        }
+
+        #box4 {
+            order: 1;
+        }
+
+        #box5 {
+            order: 4;
+        }
     </style>
 </head>
 
@@ -59,4 +80,5 @@
         </div>
     </div>
 </body>
+
 </html>
