@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS 우선순위</title>
+    <style>
+        #id-style {
+            background-color: deeppink;
+        }
+
+        #id-style2 {
+            background-color: deepskyblue;
+        }
+
+        div {
+            display: block;
+            padding: 30px;
+            margin: 30px;
+            background-color: gold;
+        }
+
+        .class-style3 {
+            background-color: beige !important;
+        }
+
+        .class-style2 {
+            background-color: pink;
+            font-size: 24px;
+        }
+
+        .class-style {
+            background-color: greenyellow;
+        }
+
+        ul>li.li-class {
+            background-color: orange;
+        }
+
+        ul>li {
+            background-color: violet;
+        }
+    </style>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+    <h2>CSS 우선순위</h2>
+    <div style="background-color: aquamarine;">div 1번(인라인 스타일 우선: aquamarine)</div>
+    <div id="id-style" class="class-style">div 2번(id 점수 우선: deeppink)</div>
+    <div class="class-style">div 3번(클래스 점수 우선: greenyellow)</div>
+    <div class="class-style2 class-style">div 4번(같은 속성의 경우 나중에 적용한 속성 우선: greenyellow)</div>
+    <div>div 5번(같은 요소일 경우 나중에 적용한 속성이 우선: purple)</div>
+    <ul>
+        <li class="li-class">li 1번(점수가 높은 속성이 적용: orange)</li>
+    </ul>
+    <div id="id-sytle2" class="class-style3">div 6번(!important 우선: beige)</div>
+</body>
+
+</html>
