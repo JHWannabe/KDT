@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>데이터 타입</title>
+</head>
+
+<body> 
+    <h2>데이터 타입</h2>
+    <script>
+        const num1 = 10;
+        const num2 = 11.11;
+        const num3 = 10e6;  //10의 6제곱
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+
+        //데이터 타입을 찍어주는 typeof
+        console.log(typeof(num1));
+        console.log(typeof(num2));
+        console.log(typeof(num3));
+        console.log('---------------')
+
+
+        //string 형
+        const num4 = 10;
+        const num5 = 5;
+        const str1 = 'Hello JavaScript';
+        const str2 = 'Hello World';
+        const str3 = '10';
+        console.log(num4+num5);
+        console.log(num4+str1);         //결과: 10Hellon JavaScript (연결된다.)
+        console.log(str1+str2);         //결과: 연결
+        console.log(str1 + '  '+str2)   //결과: 공백 넣기
+        console.log(`자바스크립트에서는 문자열을
+        쌍 따옴표 또는 따옴표로 둘러싸인
+        문자의 집합을 의미합니다`);
+        console.log(`str1: ${str1}, str2: ${str2}`) //f'str과 같은 기능
+        console.log(num4+str3); 1       //결과 1010
+        console.log(num4-str3);         //결과 0 (숫자로 예상할 수 있는 값이 있다면 자동 형변환)
+        console.log(num4*str3);         //결과 100
+        console.log(num4/str3);         //결과 1
+        console.log('---------------')
+
+        //논리형
+        const b1 = true;
+        const b2 = false;
+        const b3 = (10 > 5);
+        const b4 = (10 < 3);
+
+        console.log(b1)
+        console.log(b2)
+        console.log(b3)
+        console.log(b4)
+        console.log(typeof(b1))
+        console.log('---------------')
+        
+        // undefined, null
+        let num;
+        console.log(num);                   //결과: undefined
+        console.log(typeof(num));           //결과: undefined
+        let obj1 ={};
+        console.log(obj1);                   //결과 {}
+        console.log(typeof(obj1));           //결과 object
+
+        let obj2 =null;
+        console.log(obj2);                  //결과 null
+        console.log(typeof(obj2))           //결과 object
+        console.log('---------------')
+
+        //심볼형
+        const sym1 = Symbol('apple');
+        const sym2 = Symbol('apple');
+        console.log(sym1)
+        console.log(sym2)
+        console.log(sym1 == sym2)           //결과 fasle (값만 같은면 true)
+        console.log(sym1 === sym2)          //결과 fasle (값과 데이터타입이 모두 같으면 true)
+
+        const sym3 =sym1;
+        console.log(sym3 == sym1);          //결과 true
+        console.log(sym3 === sym1);          //결과 true
+        console.log('---------------')
+
+        //객체형
+
+        const user = {userid:'apple',name:'김사과',age:20};
+        console.log(user)
+        console.log(user.userid)
+        console.log(user.name)
+        console.log(user.age)
+        console.log(`유저의 ID : ${user.userid} | 이름 : ${user.name} | 나이: ${user.age} 입니다.`)
+    </script>
+</body>
+</html>
