@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>배열3</title>
+</head>
+<body>
+    <h2>배열3</h2>
+    <script>
+        const user = [1, 'apple', '김사과', 20, '서울 서초구'];
+        const member = { 'userid': 'apple', 'name': '김사과', 'age': 20 };
+
+        // for in 문 배열 사용하기
+        for(let i in user){
+            console.log(`i: ${i}, user[${i}]: ${user[i]}`);
+        }
+        console.log('--------------')
+
+        // for in 문 객체 사용하기
+        for(let i in member){
+            console.log(`i: ${i}, member[${i}]: ${member[i]}`);
+        }
+        console.log('--------------')
+
+        // for of 문 배열 사용하기
+        for (let i of user) {
+                console.log(`i: ${i}`);
+            }
+            console.log('--------------')
+
+        // forEach 문 배열 사용하기
+        user.forEach(function(v, i,arr){
+            console.log(`v: ${v}, i: ${i}, arr: ${arr}`)
+        });
+    </script>
+</body>
+</html>
