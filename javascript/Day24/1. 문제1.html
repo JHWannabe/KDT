@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>문제1</title>
+</head>
+<body>
+    <h2>문제1</h2>
+    <p>이름, 국어점수, 수학점수, 영어점수를 입력받아 총점과 평균을 출력하는 문서를 작성해보자. (단, 입력은 propmt를 이용하여 받음)</p>
+    <script>
+        const name = prompt('이름을 입력하세요')
+        const kor = Number(prompt('국어점수를 입력하세요'))
+        const math = Number(prompt('수학점수를 입력하세요'))
+        const eng = Number(prompt('영어점수를 입력하세요'))
+        const total = kor + math + eng
+        const avg = total / 3
+
+        console.log(`${name}님의 성적표`)
+        console.log(`국어: ${kor}점`)
+        console.log(`수학: ${math}점`)
+        console.log(`영어: ${eng}점`)
+        console.log(`총점: ${total}점`)
+        console.log(`평균: ${avg}점`)
+    </script>
+</body>
+</html>
