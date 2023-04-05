@@ -244,7 +244,7 @@ const arr = [10, 20, 30]
 const user = {'userid':'apple', 'username':'김사과', 'age':20}
 ```
 
-### 3. forEaach 문
+### 3. forEach 문
 - 배열에서만 사용 가능하며, 요소의 개수만큼 반복
 ```
 const arr = [10, 20, 30];
