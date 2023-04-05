@@ -10,7 +10,6 @@
 
 header {
     background-image: url(images/banner.jpg);
-    background-position: contain;
     background-repeat: no-repeat;
     padding: 20px;
     margin: 0 auto 10px;
@@ -21,6 +20,7 @@ header > h1 {
     color: white;
     text-align: center;
     margin: 0;
+    letter-spacing: 5px;
 }
 
 #logininfo {
