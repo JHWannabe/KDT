@@ -6,121 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>최초의 내 사이트</title>
-    <style>
-        body {
-            background-color: bisque;
-        }
-
-        div {
-            border: 2px solid black;
-        }
-
-        .header {
-            width: 1000px;
-            height: 100px;
-            background-image: url('images/banner.jpg');
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        #content {
-            padding: 10px;
-            float: left;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-        }
-
-        .logininfo {
-            padding: 20px 10px 0;
-            float: left;
-            border: 2px solid black;
-            margin-right: 15px;
-            text-align: center;
-        }
-
-        p {
-            font-size: 24px;
-        }
-
-        span {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        a:link {
-            color: blue;
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: blue;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: red;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: red;
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div id="container"></div>
-    <div class="header">
-        <h1>전장훈 홈페이지</h1>
-    </div>
+    <div id="container">
+        <header>
+            <h1>전장훈 홈페이지</h1>
+        </header>
 
-    <div class="logininfo">
-        <span>login 정보</span>
-        <p><img src="images/profile.png" alt="profile"></p>
-        <a href="register.html"><button value="회원가입"></a>
-    </div>
-    <div id="content">
-        <h2>2023-03-27</h2>
-        <a href="resume.html">
-            <p>이력서</p><img src="images/simson.jpg" width="300">
-        </a>
+        <div id="logininfo">
+            <p>login 정보</p>
+            <img src="images/profile.png" alt="profile">
+            <a href="register.html">
+                <p value="회원가입">회원가입</p>
+            </a>
+            <a href="login.html">
+                <p value="로그인">로그인</p>
+            </a>
+        </div>
 
-        <br><br>
-        <h2>2023-03-28</h2>
+        <div id="clone">
+            <p>클론 코딩</p>
+            <a href="깔끔대장 clone.html"><img src="https://i.pinimg.com/564x/3e/d2/10/3ed210554789cfcd1006bce0de66f9cf.jpg"
+                    width="300"></a>
+        </div>
 
-        <a href="article.html">
-            <p>관심있는 뉴스기사</p><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRVLFPkaQdy9i130dq2qlckOZJ2U1jmz1liw&usqp=CAU"
-                alt="뉴스 기사" width="300">
-        </a>
-
-        <br><br>
-
-        <h2>즐겨찾기 사이트 4개</h2>
-        <br>
-
-        <a href="https://www.coupang.com/"><img src="images/coupang.png" width="300" height="100" margin="0 40px"></a>
-
-        <a href="https://www.naver.com/"><img src="images/naver.PNG" width="300" height="100" margin="0 40px"></a>
-
-        <br>
-
-        <a href="https://www.youtube.com/@tripway111"><img src="images/youtube1.PNG" width="300" height="100"
-                margin="0 40px"></a>
-
-        <a href="https://music.youtube.com/"><img src="images/youtubemusic.PNG" width="300" height="100"
-                margin="0 40px"></a>
-
-        <h2>회원 가입</h2>
-        <a href="register.html"><img
-                src="https://mblogthumb-phinf.pstatic.net/MjAxODAyMDdfMjcx/MDAxNTE3OTkxNTc3NzMw.bm0fV1sOWAodGj9p7WuSN6sqgrodQVOdIDomSOY3WPcg.nceQVP47LBUlyjqzibMQOQHyv_4ygdPosBUOMqZmH8sg.JPEG.starsky22/IMG_5160.jpg?type=w800"
-                width="300"></a>
-
-        <h2>로그인</h2>
-        <a href="login.html"><img src="https://t1.daumcdn.net/cfile/tistory/99225F425D302AF90D" width="300"></a>
+        <div id="myinfo">
+            <p>JH's TMI</p>
+            <a href="resume.html">
+                <p value="이력서">이력서</p>
+            </a>
+            <a href="article.html">
+                <p value="관심있는 뉴스기사">관심있는 뉴스기사</p>
+            </a>
+            <p>즐겨찾기 사이트 4개</p>
+            <a href="https://www.coupang.com/"><img src="images/coupang.png"></a>
+            <a href="https://www.naver.com/"><img src="images/naver.PNG"></a>
+            <a href="https://www.youtube.com/@tripway111"><img src="images/youtube1.PNG"></a>
+            <a href="https://music.youtube.com/"><img src="images/youtubemusic.PNG"></a>
+        </div>
+        
     </div>
 </body>
 
