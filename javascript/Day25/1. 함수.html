@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>함수</title>
+</head>
+
+<body>
+    <h2>함수</h2>
+    <script>
+        function func1() {
+            console.log('func1() 호출!')
+        }
+
+        func1()
+
+        function func2(num) {
+            console.log(`전달받은 매개변수의 값: ${num}`)
+        }
+
+        func2()     // undefined로 출력
+        func2(6)
+        func2('apple')
+        func2(true)
+
+        function func3(start, end) {
+            let sum = 0;
+            for (let i = start; i <= end; i++) {
+                sum += i;
+            }
+            console.log(`${start}부터 ${end}까지의 총합: ${sum}`);
+        }
+
+        func3(1, 100)
+        func3(10)
+
+        function func4() {
+            return '🎁'
+        }
+
+        func4();
+        console.log(func4);  // 함수의 메모리 주소를 따라가 출력
+        console.log(func4());
+        const presents = func4();
+        console.log(presents);
+
+        console.log('------------');
+
+        // 디폴트 매개변수
+        function func5(num1 = 1, num2 = 1) {
+            console.log(`num1의 값:${num1}, num2의 값:${num2}`);
+            console.log(`${num1} * ${num2} = ${num1 * num2}`);
+        }
+
+        func5();
+        func5(5, 6);
+
+        console.log('------------');
+
+        function func6(...x) {
+            console.log(`x의 값: ${x}`);
+            console.log(`x의 타입: ${typeof (x)}`);
+            for (i in x) {
+                console.log(`i의 값: ${i}, x[${i}]의 값: ${x[i]}`);
+            }
+        }
+
+        func6(30, 40, 70);
+
+        function func7(x1, ...x2) {
+            console.log(`x1의 값: ${x1}`);
+            console.log(`x2의 값: ${x2}`);
+        }
+
+        func7(30, 40, 70);
+
+        // 보너스!!
+        (function func8() {
+            console.log('함수를 만들고 바로 호출합니다.');
+        })();
+    </script>
+</body>
+
+</html>
