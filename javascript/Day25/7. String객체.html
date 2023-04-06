@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체</title>
+</head>
+
+<body>
+    <h2>String 객체</h2>
+    <script>
+        const str1 = '안녕하세요. JavaScript!'
+        console.log(str1)
+        console.log(str1.length)
+
+        console.log(str1.indexOf('J'))  // 7
+        console.log(str1.indexOf('Java'))   // 7
+        console.log(str1.indexOf('java'))   // 못 찾을 경우엔 -1
+        console.log(str1.indexOf('a'))  // 여러개면 처음 나온 인덱스 = 8
+        console.log(str1.lastIndexOf('a'))  // 10
+
+        console.log(str1.charAt(7)) // J
+        console.log(str1.includes('Java'))  // true
+        console.log(str1.includes('java'))  // false
+
+        console.log(str1.substring(7))  // 7 ~ 끝까지 = JavaScript
+        console.log(str1.substring(7, 11))  // Java
+
+        console.log(str1.substr(7, 4))  // 잘 쓰이지 않음 (duplicate 됨)
+        console.log(str1.replace('안녕하세요', 'Hello'))
+
+        const str2 = '김사과,오렌지,반하나,이메론,배애리,채리'
+        const students = str2.split(',')
+        console.log(students)
+
+        for (let i in students) {
+            console.log(i, students[i])
+        }
+
+        const str3 = '            JavaScript            '
+        console.log(`🎁${str3}🎁`)
+        console.log(`🎁${str3.trim()}🎁`)
+        console.log(`🎁${str3.trim().toUpperCase()}🎁`)     // method chaining
+        console.log(`🎁${str3.trim().toLowerCase()}🎁`)     // method chaining
+    </script>
+</body>
+
+</html>

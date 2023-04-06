@@ -173,3 +173,120 @@ const 객체명2 = new 클래스명(값1, 값2, ..)
 ...
 const 객체명n = new 클래스명(값1, 값2, ..)
 ```
+
+## 상속
+- 클래스 기반의 객체지향 언어와 다름
+- 자바스크립트는 프로토타입 기반의 객체 지향 언어
+
+
+### 프로토타입(prototype)
+- 모든 객체는 프로토타입이라는 객체를 가지고 있음
+- 모든 객체는 프로토타입으로부터 프로퍼티와 프로퍼티 메소드를 상속받음
+- 모든 객체는 최소한 하나 이상의 다른 객체로부터 상속을 받으며 상속되는 정보를 제공하는 객체를 프로토타입이라고 함
+```
+const dog = new Dog();  // Dog.prototype, Object.prototype
+```
+
+## Math 객체
+- 수학에서 자주 사용하는 상수와 함수들을 미리 구현한 자바스크립트 표준 내장 객체. 비교할 수 없는 값이 포함되어 있으면 NaN을 반환
+
+    - min( ): 가장 작은 수를 반환. 매개변수가 전달되지 않으면 Infinity를 반환
+    - max( ): 가장 큰 수를 반환. 매개변수가 전달되지 않으면 -Infinity를 반환
+    - round( ): 소수점 첫번째 자리에서 반올림하여 그 결과를 반환
+    - floor( ): 소수점을 버림
+    - ceil( ): 소수점을 올림
+    - random( ): 0보다 크거나 같고 1보다 작은 무작위 소수를 반환
+
+## String 객체
+```
+const str1 = 'JavaScript';
+const str2 = new String('JavaScript')
+
+str1 == str2    // true
+str1 === str2   // false
+```
+- length: 문자열의 길이를 반환하는 프로퍼티
+- indexof( ): 특정 문자나 문자열이 처음으로 등장하는 위치를 인덱스로 반환
+- charAt( ): 특정 문자열에서 전달 받은 인덱스에 위치한 문자를 반환
+- includes( ): 특정 문자열에서 전달 받은 문자열이 포함되어 있는지 여부를 반환
+- substring( ): 전달 받은 시작 인덱스부터 종료 인덱스 바로 직전까지의 문자열을 추출
+- substr( ): 전달 받은 시작 인덱스부터 전달 받은 갯수만큼 문자열을 추출
+- replace( ): 원본 문자열의 일부를 전달 받은 문자열로 치환
+- split( ): 구분자를 기준으로 나눈 후 나뉜 문자열을 하나의 배열에 저장
+- trim( ): 문자열의 앞뒤 공백을 제거
+- toUpperCase( ): 문자열을 모두 대문자로 변환
+- toLowerCase( ): 문자열을 모두 소문자로 변환
+
+## Date 객체
+- 날짜, 시간 등을 쉽게 처리할 수 있는 내장 객체
+### 연도(year)
+- 2자리로 연도를 표기: 1900년 ~ 1999년
+- 4자리로 연도를 표기: 2000년 ~
+
+### 월(month)
+- 0 ~ 11, 0(1월), 11(12월)
+
+### Date 객체 생성 방법
+```
+new Date( ): 현재 날짜 시간을 저장한 객체가 생성
+new Date('날짜 문자열'): 해당 특정 날짜와 시간을 저장한 객체가 생성
+new Date('밀리초'): 1970년 1월 1일 0시 0분 0초를 기준으로 해당 밀리초만큼 지난 날짜와 시간을 저장한 객체가 생성
+new Date(년, 월, 일, 시, 분, 초, 밀리초): 해당 날짜와 시간을 저장한 객체가 생성
+```
+
+## Web API 객체
+BOM(Browser Object Model): 비표준
+
+## Window 객체
+웹 브라우저의 창이나 탭을 표현하기 위한 객체들이며 웹 브라우저는 window 객체를 이용하여 브라우저 창을 표현할 수 있음
+```
+window.alert( )
+window.confirm( )
+window.prompt( )
+```
+- setTimeout( ): 일정 시간이 지난 후 매개변수로 제공된 함수를 실행
+```
+const 함수명 = function(){
+    실행문
+    ...
+}
+
+const st = setTimeout(함수명, 밀리초)
+```
+- clearTimeout( ): 일정 시간 후에 일어날 setTimeout( )를 취소함
+- setInterval( ): 일정 시간마다 매개변수로 제공된 함수를 실행
+- clearInterval( ): 일정 시간마다 일어날 setInterval( )를 취소함
+
+## 폼(form) 객체
+- 일반적인 폼 요소에 접근할 떄 사용
+- document.forms 컬렉션을 이용해서도 접근할 수 있음
+```
+<form name='myform' id='regform' method='post' action='#'>
+    아이디: <input type="text" name="userid" id="id"><br>
+    비밀번호: <input type="password" name="userpw" id="pw"><br>
+</form>
+```
+
+### 폼 접근하기
+```
+const frm = document.myform;    // name
+또는
+const frm = document.forms['myform']    // name
+또는
+const frm = document.forms[0]   // 한 문서의 여러 개의 폼 중 첫번째 폼
+또는
+const frm = document.getElementById('regform')  // id
+```
+
+### 아이디 입력상자에 접근하기
+```
+const userid = frm.userid     // name
+또는
+const userid = document.forms['myform'].elements[0]     // 한 문서의 myform 폼 중 첫번째 요소
+또는
+const userid = document.forms['myform'].elements['userid']      // name
+또는
+const userid = document.forms[0][0]     // 한 문서의 여러개의 폼 중 첫번째 폼의 첫번째 요소
+또는
+const userid = document.getElementById('id');
+```

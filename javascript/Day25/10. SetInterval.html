@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>setInterval</title>
+</head>
+<body>
+    <h2>setInterval</h2>
+    <script>
+        const hello = function(){
+            console.log('안녕하세요. JavaScript!')
+        }
+
+        const si = setInterval(hello, 3000);
+
+        const clearInter = function(){
+            clearInterval(si)
+            console.log('hello()가 중지되었음!')
+        }
+    </script>
+    <p><button onclick="clearInter()">중지</button></p>
+</body>
+</html>

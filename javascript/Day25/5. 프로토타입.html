@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>프로토타입</title>
+</head>
+
+<body>
+    <h2>프로토타입</h2>
+    <script>
+        function Dog(color, name, age){
+            this.color = color
+            this.name = name
+            this.age = age
+        }
+
+        const Rucy = new Dog('white','루시',13)
+        console.log(`이름: ${Rucy.name}`)
+        console.log(`색상: ${Rucy.color}`)
+        console.log(`나이: ${Rucy.age}`)
+
+        Rucy.family = '포메라니안'
+        Rucy.getFamily = function(){
+            return this.family
+        }
+        console.log(`종: ${Rucy.family}`)
+        console.log(`getFamily: ${Rucy.getFamily()}`)
+
+        const Ppomi = new Dog('white', '뽀미', 6)
+        console.log(`이름: ${Ppomi.name}`)
+        console.log(`색상: ${Ppomi.color}`)
+        console.log(`나이: ${Ppomi.age}`)
+        // console.log(`종: ${Ppomi.family}`)  //undefined
+        // console.log(`getFamily: ${Ppomi.getFamily()}`)  // 에러!
+
+        Dog.prototype.birthday = '20091210';
+        Dog.prototype.run = function(){
+            return this.name +'는 달립니다'
+        }
+        console.log(`생일: ${Rucy.birthday}`)
+        console.log(`run: ${Rucy.run()}`)
+        console.log(`생일: ${Ppomi.birthday}`)
+        console.log(`run: ${Ppomi.run()}`)
+    </script>
+</body>
+
+</html>
