@@ -4,8 +4,37 @@
     font-weight: normal;
     font-style: normal;
 }
-* {
+body {
+    width: 1500px;
     font-family: 'Humanbumsuk';
+    margin: 0 auto;
+}
+
+section#leftsidebar {
+    float: left;
+    width: 210px;
+    padding: 10px;
+    background-color: rgba(183, 181, 178, 0.3);
+}
+
+section#content {
+    float: left;
+    width: 1000px;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: rgba(240, 201, 141, 0.4);
+}
+
+section#rightsidebar {
+    float: right;
+    width: 210px;
+    padding: 10px;
+    background-color: rgba(183, 181, 178, 0.3);
+}
+
+.center{
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 header {
@@ -24,13 +53,11 @@ header > h1 {
 }
 
 #logininfo {
-    float: left;
     box-sizing: border-box;
     border: 2px solid black;
-    width: 200px;
+    width: 100%;
     height: 280px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -41,8 +68,8 @@ p {
 }
 
 #logininfo > img {
-    margin: 10px;
-    width: 176px;
+    margin: 10px auto;
+    width: 85%;
 }
 
 #logininfo > a > p {
@@ -62,9 +89,8 @@ a:link, a:visited, a:hover, a:active { color : black; }
 #myinfo {
     border: 2px solid black;
     box-sizing: border-box;
-    width: 200px;
+    width: 100%;
     padding: 10px;
-    clear: left;
 }
 
 #myinfo > a > img {
@@ -87,32 +113,34 @@ a:link, a:visited, a:hover, a:active { color : black; }
     line-height: 30px;
 }
 
-#clone {
+.content{
     display: inline-block;
     border: 2px solid black;
     box-sizing: border-box;
-    width: 400px;
+
     height: 280px;
-    padding: 10px;
     margin-bottom: 20px;
     margin-right: 10px;
+    text-align: center;
 }
 
-#clone > p {
-    text-align: left;
+div > a > p {
+    margin-bottom: 10px;
 }
 
-#playground {
-    display: inline-block;
+#clone > a > img, #playground > a > img {
+    padding: 10px;
+}
+
+#clock{
     border: 2px solid black;
     box-sizing: border-box;
-    width: 400px;
-    height: 280px;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    float: right;
 }
 
-#playground > p {
-    text-align: left;
+#datetime {
+    margin-top: 15px;
+    font-weight: bold;
 }

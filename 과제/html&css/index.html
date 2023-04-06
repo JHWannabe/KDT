@@ -15,48 +15,85 @@
             <h1>EVERYTHING OF JHWANNABE</h1>
         </header>
 
-        <div id="logininfo">
-            <p>login 정보</p>
-            <img src="images/profile.png" alt="profile">
-            <a href="register.html">
-                <p value="회원가입">회원가입</p>
-            </a>
-            <a href="login.html">
-                <p value="로그인">로그인</p>
-            </a>
-        </div>
+        <section id="leftsidebar" class="center">
+            <div id="logininfo">
+                <p>login 정보</p>
+                <img src="images/profile.png" alt="profile">
+                <a href="register.html">
+                    <p value="회원가입">회원가입</p>
+                </a>
+                <a href="login.html">
+                    <p value="로그인">로그인</p>
+                </a>
+            </div>
 
-        <div id="clone">
-            <a href="깔끔대장 clone.html">
-                <p>클론 코딩</p>
-                <img src="https://i.pinimg.com/564x/3e/d2/10/3ed210554789cfcd1006bce0de66f9cf.jpg" height="200px">
-            </a>
-        </div>
+            <div id="myinfo">
+                <p>JH's TMI</p>
+                <a href="resume.html">
+                    <p value="이력서">이력서</p>
+                </a>
+                <a href="article.html">
+                    <p value="관심있는 뉴스기사">관심있는 뉴스기사</p>
+                </a>
+                <p>즐겨찾기 사이트 4개</p>
+                <a href="https://www.coupang.com/"><img src="images/coupang.png"></a>
+                <a href="https://www.naver.com/"><img src="images/naver.PNG"></a>
+                <a href="https://www.youtube.com/@tripway111"><img src="images/youtube1.PNG"></a>
+                <a href="https://music.youtube.com/"><img src="images/youtubemusic.PNG"></a>
+            </div>
+        </section>
 
-        <div id="playground">
-            <a href="playground.html">
-                <p>Play Ground</p>
-                <img src="https://external-preview.redd.it/3gu0--UICc1jWDsEUyYZ3BI4j854svATnd97dbISH4A.jpg?auto=webp&s=5fde0beca24f87b54b6876bb7b5c4bf3f3657a3b"
-                    height="200px">
-            </a>
-        </div>
+        <section id="content">
+            <div id="clone" class="content">
+                <a href="깔끔대장 clone.html">
+                    <p>클론 코딩</p>
+                    <img src="https://i.pinimg.com/564x/3e/d2/10/3ed210554789cfcd1006bce0de66f9cf.jpg" height="200px">
+                </a>
+            </div>
+    
+            <div id="playground" class="content">
+                <a href="playground.html">
+                    <p>Play Ground</p>
+                    <img src="https://external-preview.redd.it/3gu0--UICc1jWDsEUyYZ3BI4j854svATnd97dbISH4A.jpg?auto=webp&s=5fde0beca24f87b54b6876bb7b5c4bf3f3657a3b"
+                        height="200px">
+                </a>
+            </div>
+        </section>
 
-        <div id="myinfo">
-            <p>JH's TMI</p>
-            <a href="resume.html">
-                <p value="이력서">이력서</p>
-            </a>
-            <a href="article.html">
-                <p value="관심있는 뉴스기사">관심있는 뉴스기사</p>
-            </a>
-            <p>즐겨찾기 사이트 4개</p>
-            <a href="https://www.coupang.com/"><img src="images/coupang.png"></a>
-            <a href="https://www.naver.com/"><img src="images/naver.PNG"></a>
-            <a href="https://www.youtube.com/@tripway111"><img src="images/youtube1.PNG"></a>
-            <a href="https://music.youtube.com/"><img src="images/youtubemusic.PNG"></a>
-        </div>
-
+        <section id="rightsidebar" class="center">
+            <div id="clock">
+                <p>현재 시간</p>
+                <div id="datetime"></div>
+            </div>
+        </section>
     </div>
+
+    <script>
+        function getCurrentDateTime() {
+            const now = new Date();
+            const Y = now.getFullYear();
+            const M = (now.getMonth() + 1).toString().padStart(2, '0');
+            const D = now.getDate().toString().padStart(2, '0');
+            const h = now.getHours().toString().padStart(2, '0');
+            const m = now.getMinutes().toString().padStart(2, '0');
+            const s = now.getSeconds().toString().padStart(2, '0');
+            const mm = h >= 12 ? 'PM' : 'AM'; // 오후인 경우 'PM', 오전인 경우 'AM'으로 표시
+
+            // 날짜와 시간을 문자열로 합침
+            const formattedDateTime = `${Y}-${M}-${D} ${((h % 12) || 12)}:${m}:${s} ${mm}`;
+
+            return formattedDateTime;
+        }
+
+        // HTML 요소에 현재 날짜와 시간을 출력하는 함수
+        function displayCurrentDateTime() {
+            const datetimeElement = document.getElementById('datetime');
+            datetimeElement.innerHTML = getCurrentDateTime();
+        }
+
+        // 1초마다 현재 날짜와 시간을 출력
+        setInterval(displayCurrentDateTime, 1000);
+    </script>
 </body>
 
 </html>
