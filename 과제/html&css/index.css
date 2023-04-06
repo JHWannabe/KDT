@@ -28,6 +28,7 @@ header > h1 {
     box-sizing: border-box;
     border: 2px solid black;
     width: 200px;
+    height: 280px;
     margin-bottom: 20px;
     margin-right: 10px;
 }
@@ -90,11 +91,28 @@ a:link, a:visited, a:hover, a:active { color : black; }
     display: inline-block;
     border: 2px solid black;
     box-sizing: border-box;
-    width: 900px;
+    width: 400px;
     height: 280px;
     padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
 }
 
 #clone > p {
+    text-align: left;
+}
+
+#playground {
+    display: inline-block;
+    border: 2px solid black;
+    box-sizing: border-box;
+    width: 400px;
+    height: 280px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+#playground > p {
     text-align: left;
 }
