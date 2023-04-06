@@ -1,2 +1,3 @@
 - Day23: JS의 역사, JS의 특징, JS의 실행순서, 변수(var, let), 상수, 데이터 타입(number, string, boolean, undefined, null, symbol, object), 자동 타입 변환, 타입변환 함수, 자바스크립트의 대화상자
 - Day24: 조건문(if, switch), 반복문(for, while), 배열(array)
+- Day25: 함수, 호이스팅, 화살표 함수, 객체(프로퍼티, 상속, Math 객체)
