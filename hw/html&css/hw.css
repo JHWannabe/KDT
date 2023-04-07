@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+* {
+  margin: 0 auto;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+}
+
+header > img {
+  position: relative;
+}
+
+
+header > div > img {
+  position: absolute;
+  top: 100px;
+  right: 200px;
+  width: 200px;
+}
+
+header > ul > li {
+  list-style: none;
+  display: inline;
+  float: right;
+  padding: 0 7px;
+  font-size: 12px;
+}
+
+header > ul {
+    position: relative;
+    height: 40px;
+    width: 1200px;
+    text-align: center;
+}
+
+header > ul > li {
+    display: block;
+    height: 35px;
+    padding: 0 7px;
+    line-height: 35px;
+    color: #777;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+nav {
+  height: 50px;
+  margin-bottom: 10px;
+  position: sticky;
+  box-sizing: border-box;
+  top: 0;
+}
+
+nav > ul {
+  margin: 0;
+  list-style: none;
+  padding: 3px;
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 0 100px;
+  margin: 15px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: black;
+}
+
+a:active,
+a:hover {
+  color: black;
+}
+
+#kakaoch {
+  position: fixed;
+  right: 10px;
+  bottom: 210px;
+}
+
+#kakaoin {
+  position: fixed;
+  right: 10px;
+  bottom: 158px;
+}
+
+#btn {
+  position: fixed;
+  right: 21px;
+  bottom: 103px;
+}
+
+section {
+  width: 75%;
+  margin-bottom: 50px auto 50px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+
+section#intro {
+  background-image: url(https://cleanboss.kr/images/main/01_clean/pc_990_ad.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  height: 700px;
+}
+
+section#review {
+  padding-bottom: 100px;
+}
+
+
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  clear: both;
+  padding-top: 20px;
+  margin: 20px auto 40px;
+  text-align: center;
+}
+
+div > img {
+  width: 100%;
+}
+
+.product {
+  box-sizing: border-box;
+  
+  width: 32.5%;
+  height: 550px;
+  margin: 0 5px 20px;
+  float: left;
+}
+
+p, span {
+  text-align: left;
+}
+
+p.pdname, p.rvname {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p.pddesc, p.rvdesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+span.pddiscount {
+  font-family: "verdana";
+  float: left;
+  font-size: 40px;
+  color: #d61919;
+  font-weight: bold;
+}
+
+span.pddiscount:after {
+    content: "%";
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+span.pdprice1 {
+  margin-top: 5px;
+  font-family: "verdana";
+  text-decoration: line-through;
+  font-size: 15px;
+  width: 300px;
+  float: left;
+}
+
+span.pdprice2 {
+  font-family: "verdana";
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+}
+
+p#rvdesc {
+  font-size: 14px;
+}
+
+p#rvdesc > img {
+  width: 10px;
+}
+
+.review {
+  box-sizing: border-box;
+  width: 18%;
+  height: 350px;
+  margin: 0 12px 40px;
+  float: left;
+  background-color: white;
+}
+
+.review > p {
+  margin: 10px;
+}
+
+#main-review {
+  width: 100%;
+  background-color: rgb(211, 211, 211, 0.2);
+}
+
+footer {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 20px 50px;
+  border: 1px solid rgba(211, 211, 211, 0.2);
+  clear: both;
+  column-count: 3;
+  column-gap: 30px;
+  column-rule: 1px solid green;
+}
+
+footer > p {
+  font-size: 10px;
+  line-height: 200%;
+}
+
+#copyright {
+  width: 100%;
+  height: 20px;
+  padding-top: 5px;
+  background-color: rgba(211, 211, 211, 0.2);
+}
+
+#copyright > p {
+  font-size: 13px;
+  text-align: center;
+}
