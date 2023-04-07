@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Location 객체</title>
+</head>
+
+<body>
+    <h2>Location 객체</h2>
+    <script>
+        console.log(`현재 문서의 URL 주소: ${location.href}`)
+        console.log(`현재 문서의 protocol: ${location.protocol}`)
+        console.log(`현재 문서의 hostname: ${location.hostname}`)
+        console.log(`현재 문서의 pathname: ${location.pathname}`)
+
+        function sendit() {
+            location.href = 'https://python.org'
+        }
+    </script>
+    <p><button onclick="sendit()">이동</button></p>
+</body>
+
+</html>

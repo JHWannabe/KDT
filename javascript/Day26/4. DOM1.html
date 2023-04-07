@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM1</title>
+</head>
+
+<body>
+    <h2>DOM1</h2>
+    <ul>
+        <li name="markup">HTML</li>
+        <li>CSS</li>
+        <li id="javascript" class="js">JavaScript</li>
+        <li class="js">jQuery</li>
+        <li class="backend">Apache</li>
+        <li class="backend">Nginex</li>
+        <li id="nodejs" class="js">Node.js</li>
+        <li id="react" class="js">React</li>
+    </ul>
+    <script>
+        // 태그 이름
+        const tagName = document.getElementsByTagName('li')
+        for (let i = 0; i < tagName.length; i++) {
+            console.log(tagName[i])
+            tagName[i].style.color = 'gold'
+        }
+        console.log('-------------')
+
+        // 클래스 이름
+        const className = document.getElementsByClassName('js')
+        for (let i = 0; i < className.length; i++) {
+            console.log(className[i])
+            className[i].style.color = 'deeppink'
+        }
+        console.log('-------------')
+
+        // 아이디 이름
+        const idName = document.getElementById('javascript')
+        console.log(idName)
+        idName.style.color = 'skyblue'
+
+        // name 속성
+        const name = document.getElementsByName('markup')
+        for (let i = 0; i < name.length; i++) {
+            console.log(name[i])
+            name[i].style.color = 'lavender'
+        }
+        console.log('-------------')
+
+        // 선택
+        const qs = document.querySelectorAll('li.backend')
+        for (let i = 0; i < qs.length; i++) {
+            console.log(qs[i])
+            qs[i].style.color = 'navy'
+        }
+        console.log('-------------')
+    </script>
+</body>
+
+</html>
