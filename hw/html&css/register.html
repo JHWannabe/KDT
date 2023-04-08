@@ -7,62 +7,77 @@
 </head>
 
 <body>
-    <center>
-        <h2>회원 가입</h2>
-    </center>
     <form action="./login.html" method="post" onsubmit="return sendit()">
-        <p>이름<br><input type="text" name="username" id="username" maxlength="5" placeholder="이름을 입력하세요"></p>
+        <center>
+            <h2>회원 가입</h2>
+        </center>
+        <div>
+            <p>이름:</p>
+            <input type="text" name="username" id="username" class="whole" maxlength="5" placeholder="이름을 입력하세요">
+        </div>
 
-        <p>주민등록번호<br><input type="text" name="ssn1" id="ssn1" maxlength="6" width="40%"> - <input type="password"
-                name="ssn2" id="ssn2" maxlength="7" width="40%"></p>
+        <div>
+            <p style="clear: both;">주민등록번호:
+                <input type="text" name="ssn1" id="ssn1" class="half" maxlength="6" style="margin-left: 7px;"> - <input type="password"
+                    name="ssn2" id="ssn2" class="half" maxlength="7" style="margin-left:20px;">
+            </p>
+        </div>
 
-        <p>성별<br><input type="radio" id="male" name="gender" value="남자" checked><label for="male">남자</label> <input
-                type="radio" id="female" name="gender"><label for="female" value="여자">여자</label></p>
+        <div>
+            <p id="gender">성별:
+                <input type="radio" id="male" name="gender" value="남자" checked style="margin-left: 90px;"><label
+                    for="male">남자</label>
+                <input type="radio" id="female" name="gender"><label for="female">여자</label>
+            </p>
+        </div>
 
-        <p>휴대폰번호<br><input type="tel" id="hp" maxlength="11"></p>
+        <div>
+            <p style="clear: both;">아이디:</p>
+            <input type="text" name="userid" id="userid" class="whole" maxlength="20" placeholder="id를 입력하세요" required>
+        </div>
 
-        <p>이메일<br><input type="text" id="email" name="email" maxlength="20"> @ <select type="text" name="email">
-                <option value="naver.com">naver.com</option>
-                <option value="kakao.com">kakao.com</option>
-                <option value="gmail.com">gmail.com</option>
-                <option value="daum.net">daum.net</option>
-            </select></p>
+        <div id="userpw" style="clear: both;">
+            <p>비밀번호: </p><input type="password" name="userpw" class="half" id="userpw" maxlength="20"
+                placeholder="비밀번호를 입력하세요">
+        </div>
+        <div id="userpw_re" style="padding-left:40px;">
+            <p>비밀번호 확인: </p><input type="password" name="userpw" class="half" id="userpw_re" maxlength="20"
+                placeholder="비밀번호를 입력하세요" style="margin-left:32px;">
+        </div>
 
-        <p>우편번호: <input type="text" name="zipcode" maxlength="5" id="sample6_postcode"> <input type="button"
-                onclick="sample6_execDaumPostcode()" value="우편번호 찾기"></p>
-        <p>주소: <input type="text" name="address1" id="sample6_address"></p>
-        <p>참고사항: <input type="text" name="address3" id="sample6_extraAddress"></p>
-        <p>상세주소: <input type="text" name="address2" id="sample6_detailAddress"></p>
+        <div>
+            <p>휴대폰번호: </p><input type="tel" id="hp" class="whole" maxlength="11">
+        </div>
 
-        <p>직업<br>
-            <select name="job">
-                <option value="프로그래머">프로그래머</option>
-                <option value="공무원">공무원</option>
-                <option value="전문직">전문직</option>
-                <option value="학생">학생</option>
-                <option value="취준생">취준생</option>
-            </select>
-        </p>
+        <div>
+            <p style="clear: both;"> 이메일: </p><input type="text" id="email" class="whole" name="email">
+        </div>
 
+        <div>
+            <p style="clear: both;">우편번호: </p><input type="text" name="zipcode" class="half" maxlength="5" id="sample6_postcode" style="float:left;"> <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="float:left;">
+            <p style="clear: both;">주소: </p><input type="text" name="address1" class="whole" id="sample6_address">
+            <p style="clear: both;">참고사항: </p><input type="text" name="address3" class="whole" id="sample6_extraAddress">
+            <p style="clear: both;">상세주소: </p><input type="text" name="address2" class="whole" id="sample6_detailAddress">
+        </div>
 
-        <hr style="border: solid 2px gray;">
-        <p>아이디: <input type="text" name="userid" class="login" id="userid" maxlength="20" placeholder="id를 입력하세요"
-                required></p>
+        <div>
+            <p style="clear: both;">직업:</p>
+                <select name="job">
+                    <option value="프로그래머">프로그래머</option>
+                    <option value="공무원">공무원</option>
+                    <option value="전문직">전문직</option>
+                    <option value="학생">학생</option>
+                    <option value="취준생">취준생</option>
+                </select>
+            
+        </div>
 
+        <div>
+            <p style="margin-bottom:5px; clear: both;">자기소개</p>
+            <p style="clear: both;"><textarea name="content" cols="50" rows="10"></textarea></p>
+        </div>
 
-        <p>비밀번호: <input type="password" name="userpw" class="login" id="userpw" maxlength="20"
-                placeholder="비밀번호를 입력하세요"></p>
-
-
-        <p>비밀번호 확인: <input type="password" name="userpw" class="login" id="userpw_re" maxlength="20"
-                placeholder="비밀번호를 입력하세요"></p>
-
-        <br>
-
-        <p class="left">자기소개</p>
-        <p class="left"><textarea name="content" cols="50" rows="10"></textarea></p>
-
-        <p>
+        <p class="buttons">
             <button type="reset">다시 입력</button>&nbsp;&nbsp;&nbsp;
             <button>회원 가입</button>
         </p>

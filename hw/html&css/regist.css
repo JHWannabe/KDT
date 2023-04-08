@@ -1,113 +1,88 @@
 form {
-            font-weight: bold;
-        }
+    width: 1000px;
+    height: 1600px;
+    margin: 0 auto;
+    font-weight: bold;
+    background-image: url('images/registback.png');
+    background-position: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+}
 
-        p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
+div{
+    padding: 0 100px 0 140px;
+}
 
-        input[name="username"] {
-            box-sizing: border-box;
-            width: 600px;
-            height: 45px;
-            background-color: beige;
-            padding: 10px 10px;
-            margin: 5px 0;
-            font-size: 15px;
-            text-align: center;
-            border: 2px solid black;
-        }
+div > p {
+    float: left;
+    font-size: 20px;
+    margin-bottom: 30px;
+    /* text-align: center; */
+}
 
-        input[name="zipcode"],
-        input[name="address1"],
-        input[name="address2"],
-        input[name="address3"] {
-            box-sizing: border-box;
-            width: 300px;
-            height: 45px;
-            background-color: beige;
-            padding: 10px 10px;
-            margin: 5px 0;
-            font-size: 15px;
-            text-align: center;
-            border: 2px solid black;
-        }
+input[class='whole'], select {
+    box-sizing: border-box;
+    float: right;
+    width: 600px;
+    height: 45px;
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: white;
+    padding: 10px;
+    margin: 5px 20px;
+    font-size: 15px;
+}
 
-        input[name="ssn1"],
-        input[name="ssn2"],
-        input[name="email"],
-        select {
-            box-sizing: border-box;
-            width: 290px;
-            height: 45px;
-            background-color: beige;
-            padding: 10px 10px;
-            margin: 5px 0;
-            font-size: 20px;
-            text-align: center;
-            border: 2px solid black;
-        }
+input[class='half'] {
+    box-sizing: border-box;
+    width: 190px;
+    height: 45px;
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: white;
+    padding: 10px;
+    margin: 5px 20px 5px 50px;
+    font-size: 15px;
+}
 
-        input[type="tel"] {
-            box-sizing: border-box;
-            width: 600px;
-            height: 45px;
-            background-color: beige;
-            padding: 10px 10px;
-            margin: 5px 0;
-            font-size: 15px;
-            text-align: center;
-            border: 2px solid black;
-        }
+#userpw, #userpw_re {
+    padding-right: 0;
+    float: left;
+}
 
-        input[name="userpw"],
-        input[name="userpw_re"],
-        input[name="userid"] {
-            width: 500px;
-            height: 45px;
-            border: none;
-            padding: 10px 10px;
-            margin: 5px 0;
-            font-size: 15px;
-            background-color: white;
-            border-bottom: 3px solid black;
-        }
+p > input {
+    width: 250px;
+}
 
-        textarea[name="content"] {
-            width: 800px;
-            height: 200px;
-            resize: none;
-            font-size: 20px;
-            background-color: beige;
-            border: 2px solid black;
-        }
+input[type="radio"]{
+    width:20px;
+    height: 15px;
+}
 
-        input[type="button"],
-        button {
-            height: 45px;
-            background-color: forestgreen;
-            color: white;
-            margin: 5px 0;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            border: none;
-        }
+textarea[name="content"] {
+    width: 740px;
+    height: 200px;
+    resize: none;
+    font-size: 20px;
+    background-color: beige;
+    border: 2px solid black;
+}
 
-        input.login {
-            display: inline-block;
-        }
+input[type="button"],
+button {
+    height: 45px;
+    background-color: forestgreen;
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
 
-        input[id="userid"] {
-            margin-left: 92px;
-        }
-
-        input[id="userpw1"] {
-            margin-left: 70px;
-        }
-
-        input[id="userpw2"] {
-            margin-left: 22px;
-        }
+p.buttons {
+    clear: both;
+    text-align: center;
+}
