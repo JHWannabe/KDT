@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 form {
     width: 1000px;
     height: 1600px;
@@ -9,6 +15,7 @@ form {
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 120px;
+    font-family: 'Humanbumsuk';
 }
 
 h2{
@@ -22,8 +29,8 @@ div{
 
 p {
     float: left;
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 25px;
+    margin-bottom: 20px;
     clear: both;
 }
 
@@ -63,7 +70,7 @@ input.half {
 
 input.ssn {
     float: none;
-    width: 220px;
+    width: 215px;
     padding: 10px;
     margin: 5px 20px;
 }
@@ -82,16 +89,18 @@ textarea[name="content"] {
     border: 2px solid black;
 }
 
-input[type="button"],
 button {
+    font-family: 'Humanbumsuk';
     height: 45px;
-    background-color: forestgreen;
-    color: white;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
     margin: 5px 0;
-    padding: 10px;
-    font-size: 20px;
+    padding: 15px 25px;
+    font-size: 23px;
+    line-height: 14px;
     cursor: pointer;
-    border: none;
 }
 
 p.buttons {

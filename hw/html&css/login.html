@@ -7,73 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 페이지</title>
     <style>
+        @font-face {
+            font-family: 'Humanbumsuk';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Humanbumsuk';
+            font-weight: bold;
+        }
+
         div{
-            border: 2px solid black;
-            background-color: beige;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 20px;
             position: center;
+            box-sizing: border-box;
             width: 800px;
+            padding: 50px 50px 20px;
+            margin: 230px auto;
         }
-        img {
-            margin-bottom: 50px;
-        }
+
         p {
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             text-align: center;
         }
 
         h2 {
+            font-size: 30px;
             text-align: center;
+            margin-bottom: 50px;
         }
 
         input.login {
             display: inline-block;
-        }
-
-        input[type="password"],
-        input[name="userid"] {
+            margin-left: 30px;
             width: 300px;
             height: 45px;
             border: none;
             padding: 10px 10px;
-            font-size: 15px;
-            background-color: white;
+            font-size: 20px;
+            background-color: transparent;
             border-bottom: 3px solid black;
         }
-        input[id="userid"] {
-            margin-left: 30px;
-        }
-        input[id="userpw1"] {
+
+        input#userpw1 {
             margin-left: 8px;
         }
+
         button {
             width: 150px;
-            margin: 20px 0;
             border: 2px solid black;
-            border-radius: 45px;
+            border-radius: 12px;
             background-color: white;
             color: black;
             padding: 12px 25px;
-            font-size: 20px;
+            font-size: 23px;
+            font-family: 'Humanbumsuk';
             cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <h2>로그인</h2>
-    <center>
-    <img src="images/어서와.jpg">
     <div>
-        
+        <h2>로그인</h2>
         <p>아이디: <input type="text" name="userid" class="login" id="userid" maxlength="20" placeholder="id를 입력하세요" required></p>
-
-
         <p>비밀번호: <input type="password" name="userpw" class="login" id="userpw1" maxlength="20" placeholder="비밀번호를 입력하세요"></p>
-
-        <a href="./index.html"><button>로그인</button></a>
+        <p><a href="./index.html"><button>login</button></a></p>
     </div>    
-    </center>
 </body>
 
 </html>
