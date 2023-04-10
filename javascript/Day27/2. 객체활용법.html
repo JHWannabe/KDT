@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>객체 활용법</title>
+</head>
+
+<body>
+    <h2>객체 활용법</h2>
+    <script>
+        let dog = {
+            name: '루시',
+            age: 14,
+            'dog-wegiht': 3.5,
+            ['dog-height']: 0.8
+        }
+
+        console.log(dog.name)
+        console.log(dog['age'])
+
+        dog.family = '포메라니안'
+        console.log(dog.family)
+        console.log(dog['family'])
+
+        delete dog['dog-height']    // 객체 프로퍼티 지우기
+        console.log(dog['dog-height'])
+        console.log('-------------')
+
+        // 동적으로 속성에 접근하기
+        function getValue(obj, key) {
+            // dog.name
+            return obj[key]
+        }
+
+        console.log(getValue(dog, 'name'))
+
+        function addKey(obj, key, value) {
+            obj[key] = value;
+        }
+
+        addKey(dog, 'dog-height', 0.7)
+        console.log(dog)
+
+        function deleteKey(obj, key) {
+            delete obj[key]
+        }
+
+        deleteKey(dog, 'dog-height')
+        console.log(dog)
+        console.log('-------------')
+
+        // 객체 생성 함수 만들기
+        const x = 0
+        const y = 0
+        const coord = { x, y }
+        console.log(coord)
+
+        function makeObj(name, age) {
+            return { name, age }
+        }
+
+        console.log(makeObj('apple', 20))
+
+        const apple = {
+            name: 'apple',
+            display: function () {
+                console.log(`${this.name}: 🍎`)
+            }
+        }
+
+        const orange = {
+            name: 'orange',
+            display: function () {
+                console.log(`${this.name}: 🍊`)
+            }
+        }
+
+        console.log(apple)
+        apple.display()
+        console.log(orange)
+        orange.display()
+
+        // Fruit 생성자를 만들고 위와 같은 결과를 동일하게 출력할 수 있는 객체를 만들어보자
+        // 단, Fruit(name, emoji) 형태로 만든다.
+        // function Fruit(name, emoji) {
+        //     display = function () {
+        //         console.log(`${this.name}: ${this.emoji}`)
+        //     }
+        //     return { name, emoji, display }
+        // }
+
+        function Fruit(name, emoji) {
+            this.name = name
+            this.emoji = emoji
+            this.display = function () {
+                console.log(`${this.name}: ${this.emoji}`)
+            }
+        }
+
+        watermelon = new Fruit('watermelon', '🍉')
+        console.log(watermelon)
+        watermelon.display()
+    </script>
+</html>
