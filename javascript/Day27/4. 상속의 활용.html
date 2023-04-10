@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>상속의 활용</title>
+</head>
+
+<body>
+    <h2>상속의 활용</h2>
+    <script>
+        class Animal {
+            constructor(color){
+                this.color = color
+            }
+            eat() {
+                console.log('먹는다!')
+            }
+            sleep() {
+                console.log('잔다!')
+            }
+        }
+
+        // 상속
+        class Dog extends Animal {
+            play() {
+                console.log('논다!')
+            }
+        }
+
+        const Rucy = new Dog('white')
+        console.log(Rucy)
+        Rucy.eat()
+        Rucy.sleep()
+        Rucy.play()
+
+        class Cat extends Animal {
+            constructor(color, name){
+                super(color)    // 부모 클래스에 보냄
+                this.name = name
+            }
+
+            // 오버라이딩
+            eat(){
+                console.log('맛있게 먹는다!')
+            }
+        }
+
+        const Horang = new Cat('black', '호랑')
+        console.log(Horang)
+        Horang.eat()
+        console.log('-----------------')
+
+        // 문제
+        // 정직원, 아르바이트를 나타낼 수 있는 클래스를 생성
+        // 직원의 정보: 이름, 부서명, 한달 근무 시간
+        // 급여: 정직원(20000원), 아르바이트(10000원)
+        // 매달 직원들의 정보를 이용하여 한달 급여를 계산하는 메소드를 구현(calculatePay())
+        // 예) kim.calculatePay() -> 한달 급여
+
+        class Emp{
+            constructor(name, part){
+                this.name = name
+                this.part = part
+            }
+
+            calculatePay(day) {
+                pass
+            }
+        }
+
+        class FTEmployee extends Emp {
+            calculatePay(day){
+                let tot = day * 20000
+                console.log(`급여: ${tot}원`)
+                return tot
+            }
+
+        }
+
+        class PTEmployee extends Emp {
+            calculatePay(day) {
+                let tot = 10000 * day
+                console.log(`급여: ${tot}원`)
+                return tot
+            }
+        }
+
+        const kim = new FTEmployee('kim', 'sales')
+        kim.calculatePay(20)
+
+        const lee = new PTEmployee('lee','marketing')
+        lee.calculatePay(25)
+
+        
+        // 강사님 버전
+        class Employee {
+            constructor(name, department, hoursPerMonth, payRate) {
+                this.name = name
+                this.department = department
+                this.hoursPerMonth = hoursPerMonth
+                this.payRate = payRate
+            }
+            calculatePay() {
+                return this.hoursPerMonth * this.payRate
+            }
+        }
+
+        class FTE extends Employee {
+            static PAY_RATE = 20000;
+            constructor(name, department, hoursPerMonth){
+                super(name, department, hoursPerMonth, FTE.PAY_RATE);
+            }
+        }
+
+        class PTE extends Employee {
+            static PAY_RATE = 10000;
+            constructor(name, department, hoursPerMonth) {
+                super(name, department, hoursPerMonth, FTE.PAY_RATE);
+            }
+        }
+
+        const Kim = new FTE('김사과', '개발자', 160)
+        const Oh = new PTE('오렌지', '디자이너', 100)
+        console.log(Kim.calculatePay())
+        console.log(Oh.calculatePay())
+
+
+    </script>
+</body>
+
+</html>

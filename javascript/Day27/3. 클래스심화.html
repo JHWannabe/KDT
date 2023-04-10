@@ -64,7 +64,7 @@
                 console.log(`${this.#name}는 먹습니다.`)
             }
 
-            colorEat = () => {
+            myEat = () => {
                 this.#eat()
             }
         }
@@ -78,7 +78,41 @@
         console.log(Rucy)
         console.log(Rucy.name)
         Rucy.run()
-        Rucy.colorEat()
+        Rucy.myEat()
+        console.log('----------------')
+
+        // 문제
+        // 카운터 만들기
+        // 카운터를 0으로 값을 초기화 한 뒤 하나씩 숫자를 증가할 수 있는 메소드를 구현
+        class Counter{
+            #n
+            constructor(n){
+                if(!isNaN(n) || n < 0){
+                    this.#n = 0
+                }else{
+                    this.#n = n
+                }
+            }
+
+            get n(){
+                return this.#n
+            }
+
+            increment = () => {
+                this.#n++
+                console.log(this.#n)
+            }
+        }
+
+        const cnt = new Counter(0);
+        cnt.increment() // 1
+        cnt.increment() // 2
+        cnt.increment() // 3
+        cnt.increment() // 4
+
+        const cnt2 = new Counter(10);
+        cnt2.increment() // 11
+        cnt2.increment() // 12
     </script>
 </body>
 

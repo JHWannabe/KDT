@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wrapper</title>
+</head>
+
+<body>
+    <h2>Wrapper</h2>
+    <script>
+        const num = 10  // number 원시 타입
+        console.log(typeof(num))            // number
+        console.log(typeof(num.toString())) // string
+        console.log(typeof(num))            // number
+
+        // 지수 표기법(10의 n제곱으로 표기)
+        const x1 = 102
+        console.log(x1.toExponential())
+
+        // 반올림하여 문자열로 변환
+        const x2 = 1234.12
+        console.log(x2.toFixed())
+
+        // 로컬형식의 문자형으로 변환
+        console.log(x2.toLocaleString('ar-EG')) // 아랍어로 변환
+
+        const x3 = 0.1 + 0.2 - 0.2
+        console.log(x3)     // 0.10000000000000003
+
+        console.log(globalThis)
+
+        const URL = 'https://코리아아이티아카데미.com'
+        const encoded = encodeURI(URL)     // 이스케이프 처리
+        const decoded = decodeURI(encoded) // 디코드 처리(원래대로)
+        console.log(encoded)
+        console.log(decoded)
+
+        // 모든 문자를 인코딩(특수문자 포함)
+        const encodedCom = 'https://코리아아이티아카데미.com'
+        console.log(encodeURIComponent(encodedCom))
+    </script>
+</body>
+
+</html>
