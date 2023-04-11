@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>세트 1</title>
+</head>
+
+<body>
+    <h2>세트 1</h2>
+    <script>
+        const set = new Set([1, 2, 3, 4, 5])
+        console.log(set)
+        console.log(set.size)
+        console.log(set.has(2))
+        console.log(set.has(10))
+
+        set.forEach((item) => console.log(item))
+
+        for (let value of set) {
+            console.log(value)
+        }
+
+        set.add(6)
+        console.log(set)
+        set.add(6)  // 추가 안됨
+        console.log(set)
+        set.delete(6)
+        console.log(set)
+        set.clear() // 전부 삭제
+        console.log(set)
+
+        const obj1 = {name:'사과', emoji:'🍎', price:1000}
+        const obj2 = { name: '바나나', emoji: '🍌', price:2000}
+        const set2 = new Set([obj1,obj2])
+        console.log(set2)
+
+        obj1.price= 1500
+        set2.add(obj1)
+        console.log(set2)
+
+        const obj3 = { name: '사과', emoji: '🍎', price: 1000 }
+        set2.add(obj3)
+        console.log(set2)
+    </script>
+</body>
+
+</html>

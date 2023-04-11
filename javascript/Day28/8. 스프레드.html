@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>스프레드</title>
+</head>
+<body>
+    <h2>스프레드</h2>
+    <script>
+        function add(num1, num2, num3){
+            return num1 + num2 + num3
+        }
+
+        const nums = [10, 20, 30]
+        console.log(add(nums[0], nums[1], nums[2]))
+        console.log(add(...nums))
+
+        function sum(num1, num2, ...nums){
+            console.log(nums)
+        }
+
+        sum(1, 3, 7, 10, 4, 8, 9)
+        console.log('-----------')
+        
+        const fruits1 = ['🍒', '🍍']
+        const fruits2 = ['🍏', '🍋']
+        let arr = fruits1.concat(fruits2)
+        console.log(arr)
+        arr = [...fruits1, ...fruits2]
+        console.log(arr)
+        arr = [...fruits1,'🍉', ...fruits2]
+        console.log(arr)
+        console.log('-----------')
+
+        const apple = {name:'김사과', age:20, address:{ si: 'seoul'}}
+        console.log(apple)
+        const apple_update = { ...apple, job:'프로그래머'}
+        console.log(apple)
+        console.log(apple_update)
+        console.log('-----------')
+
+        const fruits = ['🍒','🍍','🍌','🍏', '🍋']
+        const [fruit1, fruit2, ...others] = fruits
+        console.log(fruit1)
+        console.log(fruit2)
+        console.log(others)
+
+        const point = [1, 2]
+        const [x, y, z=0] = point
+        console.log(x)
+        console.log(y)
+        console.log(z)
+        console.log('-----------')
+
+        function sendEmoji(){
+            return ['🍒', '🍍', '🍌', '🍏', '🍋']
+        }
+
+        const [cherry, pineapple, banana, greenapple, lemon] = sendEmoji()
+        console.log(cherry)
+        console.log(pineapple)
+        console.log(banana)
+        console.log(greenapple)
+        console.log(lemon)
+        console.log('-----------')
+
+        // function display(apple){
+        //     console.log('이름', apple.name)
+        //     console.log('나이', apple.age)
+        //     console.log('직업', apple.job)
+        // }
+
+        function display({name, age, job}) {
+                console.log('이름', name)
+                console.log('나이', age)
+                console.log('직업', job)
+            }
+        console.log(apple_update)
+        display(apple_update)
+        console.log('-----------')
+
+        const {name, age, pet='루시', job: hobby} = apple_update
+        console.log(name)
+        console.log(age)
+        console.log(pet)
+        console.log(hobby)
+
+        const component = {
+            name: 'Button',
+            styles: {
+                size:20,
+                color:'black'
+            }
+        }
+
+        function changeColor({styles: {color}}){
+            console.log(color)
+        }
+
+        changeColor(component)
+    </script>
+    
+</body>
+</html>

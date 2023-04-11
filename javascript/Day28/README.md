@@ -79,3 +79,46 @@ function* 제너레이터명() {
 
 }
 ```
+
+<br><hr>
+
+# 스프레드(Spread) 연산자
+- 모든 Iterable은 Spread가 될 수 있음
+- 순회가능한 데이터는 펼쳐질 수 있음
+```
+function 함수명(...iterable)
+    [...iterable]
+    {...obj}
+
+function add(num1, num2, num3){
+    return num1 + num2 + num3
+}
+
+add(10, 20, 30)
+
+const num2 = [10, 20, 30]
+add(nums[0], nums[1], nums[2])
+add(...nums)
+```
+
+## 구조분해할당
+```
+const fruits = ['🍌','🍊', '🍎','🍉','🍒']
+const [fruit1, fruit2, fruit3, fruit4, fruit5] = fruits
+const [fruit1, fruit2, ...others] = fruits
+
+✔️ 참고
+const point = [1, 2]
+const [x, y, z=0] = point
+```
+
+<br><hr>
+
+# 세트(Set)
+- set 객체는 중복되지 않은 유일한 값들의 집합
+- 요소 순서에 의미가 없음
+- 인덱스로 요소에 접근할 수 없음
+- 교집합, 합집합, 차집합, 여집합 등을 구현
+```
+const 세트명 = new Set([요소1, 요소2, 요소3, ...])
+```

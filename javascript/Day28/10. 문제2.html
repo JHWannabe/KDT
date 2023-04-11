@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 2</title>
+</head>
+<body>
+    <h2>문제 2</h2>
+    <p>문제 2-1. 주어진 배열에서 중복을 제거해보자!<br><br>
+        const fruits=['🥝', '🍅','🍇','🍈','🍉','🍊','🍋','🍌','🍍','🥝','🍎','🍎','🍐','🍋','🍈','🍓','🥝','🍅']
+        <br><br>
+        문제 2-2. 주어진 두 세트의 공통된 아이템만 담고 있는 세트를 생성해보자.<br><br>
+
+        const set1 = new Set([1,2,3,4,5])<br>
+        const set2 = new Set([1,2,3])
+    </p>
+    <script>
+        const fruits = ['🥝', '🍅', '🍇', '🍈', '🍉', '🍊', '🍋', '🍌', '🍍', '🥝', '🍎', '🍎', '🍐', '🍋', '🍈', '🍓', '🥝', '🍅']
+        const set_fruits = new Set(fruits)
+        console.log(set_fruits)
+
+        const set1 = new Set([1, 2, 3, 4, 5])
+        const set2 = new Set([1, 2, 3])
+        // const interSet = new Set([])
+        // for (let item of set2) {
+        //         if (set1.has(item))
+        //         interSet.add(item)
+        //     }
+        // console.log(interSet)
+
+        function findIntersection(set1, set2){
+            return new Set([...set1].filter((item) => set2.has(item)))
+        }
+
+        console.log(findIntersection(set1, set2))
+    </script>
+</body>
+</html>
