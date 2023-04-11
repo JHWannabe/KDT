@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>문제1</title>
+    <script>
+        window.onload = function () {
+            const btn1 = document.getElementById('btn1')
+            const btn2 = document.getElementById('btn2')
+            btn1.addEventListener('click', clickBtn)
+            btn2.addEventListener('click', clickBtn)
+            btn3.addEventListener('click', (e) => {
+                console.log(`e.target.id: ${e.target.id}`)
+                console.log('버튼 3이 눌렸습니다!')
+            })
+        }
+        function clickBtn(e) {
+            const id = e.target.id
+            if (id == 'btn1') {
+                console.log('버튼 1이 눌렸습니다!')
+            }
+            else if (id == 'btn2') {
+                console.log('버튼 2가 눌렸습니다!')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>문제1</h2>
+    <p>버튼 2개를 아래와 같이 만들고 각 버튼을 누르면 콘솔에 출력하는 문서를 만들어보자. (단, 이벤트 객체를 이용하여 버튼을 구별함)
+        <br><br>
+        버튼1을 클릭 -> 버튼 1이 눌렸습니다.<br>
+        버튼2을 클릭 -> 버튼 2가 눌렸습니다.
+        <br><br>
+        window.onload = function() {
+        버튼과 이벤트리스너 세팅!
+        }
+        <br>
+        function clickBtn(e) {
+        버튼을 구별하여 버튼의 출력을 결정
+        }
+    </p>
+    <button type="button" id="btn1" value="확인">버튼 1</button>
+    <button type="button" id="btn2" value="확인">버튼 2</button>
+    <button type="button" id="btn3" value="확인">버튼 3</button>
+</body>
+
+</html>
