@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>프로미스3</title>
+</head>
+
+<body>
+    <h2>프로미스3</h2>
+    <script>
+        function getBanana() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve('🍌')
+                }, 1000)
+            })
+        }
+
+        function getCherry() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve('🍒')
+                }, 3000)
+            })
+        }
+
+        function getOrange() {
+            return Promise.reject(new Error('오렌지는 다 팔림!'))
+        }
+
+        // 바나나와 체리를 갖고오기
+        // 순차적으로 처리 -> 총 4초가 걸림
+        // 바나나와 체리를 배열에 저장해서 콘솔에 출력
+        getBanana()     // 🍌
+            .then((banana) => getCherry()   // 🍌 🍒
+                .then((cherry) => [banana, cherry]))    // [🍌, 🍒]
+            .then(console.log) // [🍌, 🍒]
+
+        // Promise.all
+        // 병렬적으로 한번에 모든 Promise들을 실행
+        Promise.all([getBanana(), getCherry()])
+            .then((fruits) => console.log('Promise.all: ', fruits))
+
+        // 하나라도 실패하면 전체가 실패
+        Promise.all([getBanana(), getCherry(), getOrange()])
+            .then((fruits) => console.log('Error: ', fruits))
+            .catch(console.log)
+
+        // Promise.allSettled
+        // 에러가 발생하더라도 모든 promise들의 결과를 반환
+        Promise.allSettled([getBanana(), getCherry(), getOrange()])
+            .then((fruits) => console.log('Promise.allSettled: ', fruits))
+            .catch(console.log)
+
+        // Promise.race
+        // 주어진 Promise 중에서 가장 빨리 수행된 것을 출력
+        Promise.race([getBanana(), getCherry()])
+            .then((fruit) => console.log('Promise.race: ', fruit))
+            .catch(console.log)
+    </script>
+</body>
+
+</html>
