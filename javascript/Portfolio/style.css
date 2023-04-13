@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'KCCChassam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-white: white;
+    --color-space: rgb(25, 25, 44);
+    --color-lavender: rgb(106, 106, 196);
+    --color-gold: rgb(239, 203, 0);
+
+
+    --font-large: 48px;
+    --font-medium: 26px;
+    --font-regular: 18px;
+    --font-small: 15px;
+    --font-micro: 12px;
+
+    --animation-duration: 300ms2;
+    --size-border-radius: 4px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'KCCChassam';
+    font-weight: 600;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+ul { padding-left: 0; }
+li { list-style: none; }
+
+button {
+    background-color: var(--color-white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: var(--font-large);
+    font-weight: bold;
+    margin: 16px 0px;
+}
+
+h2 {
+    font-size: var(--font-medium);
+    margin: 8px 0px;
+}
+
+h3 {
+    font-size: var(--font-regular);
+    margin: 8px 0px;
+}
+
+p {
+    font-size: var(--font-regular);
+    margin: 4px 0px;
+}
+
+/* navbar */
+#navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--color-space);
+    color: var(--color-white);
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 10;
+}
+
+#navbar.navbar--bold {
+    background-color: var(--color-gold);
+}
+
+.navbar__logo {
+    font-size: var(--font-medium);
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.navbar__menu { display: flex; margin: 0; }
+
+.navbar__menu__item {
+    padding: 8px 12px;
+    margin: 0 4px;
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+    border: 1.5px solid var(--color-white)
+}
+
+.navbar__menu__item:hover {
+    border-color: var(--color-white);
+    background-color: var(--color-lavender);
+}
+
+.navbar__toggle-btn {
+    position: absolute;
+    top: 24px;
+    right:32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
+}
+
+#home {
+    background: url(./images/background.jpg) center/cover no-repeat;
+    padding:40px;
+    padding-top:120px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 350px;
+    border-color: white;
+}
+
+.home__contact {
+    color: var(--color-white);
+    background-color: var(--color-space);
+    font-size: var(--font-regular);
+    font-weight: bold;
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+    background-color: var(--color-lavender);
+}
+
+.home__title {
+    color: var(--color-white)
+}
+
+/* Section 공통 */
+.section {
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+}
+
+.section__container {
+    width: 1200px;
+    margin: auto;
+}
