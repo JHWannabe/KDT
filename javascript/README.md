@@ -2,3 +2,7 @@
 - Day24: 조건문(if, switch), 반복문(for, while), 배열(array)
 - Day25: 함수, 호이스팅, 화살표 함수, 프로퍼티, 상속, Math 객체
 - Day26: Location, history, navigator, DOM, Node, 정규 표현식
+- Day27: 함수작성법(매개변수의 기본값, 콜백 함수, ), 객체활용법, 클래스 심화
+- Day28: 이벤트(Event), 이터레이터(Iterator), 제너레이터(Generator), 스프레드(Spread), 세트(Set)
+- Day29: 프로미스(Promise), 옵셔널 체이닝(Optional Chaining)
+- Day30: 프로미스2(async/await), JSON(JavaScript Object Notation), 포트폴리오 사이트 제작
