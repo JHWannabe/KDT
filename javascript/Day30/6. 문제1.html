@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1</title>
+</head>
+<body>
+    <h2>문제1</h2>
+    <p>아래 함수를 이용하여 async/await 함수를 만들어 출력하는 문서를 작성해보자.</p>
+    <script>
+        function fetchEgg(chicken) {
+            return Promise.resolve(`${chicken} =>🥚`)
+        }
+
+        function fryEgg(egg) {
+            return Promise.resolve(`${egg} => 🍳`)
+        }
+
+        function getChicken() {
+            return Promise.resolve(`🐤 => 🐔`)
+            // return Promise.reject(new Error('치킨집 망함'))
+        }
+
+        // getChicken()
+        //     .then((chicken) => {
+        //         return fetchEgg(chicken)
+        //     })
+        //     .then((egg) => fryEgg(egg))
+        //     .then((friedEgg) => console.log(friedEgg))
+        //     .catch(() => '🐥')
+
+        // // 축약형
+        // getChicken()
+        //     .then(fetchEgg)
+        //     .then(fryEgg)
+        //     .then(console.log)
+        //     .catch(() => '🐥')
+
+        async function fetchChicken() {
+            const chicken = await getChicken()
+            const egg = await fetchEgg(chicken)
+            const friedegg = await fryEgg(egg)
+
+            return friedegg
+        }
+
+        fetchChicken()
+            .then((chicken) => console.log(chicken))
+
+
+        async function makeFriedEgg(){
+            let chicken;
+            try{
+                chicken = await getChicken()
+            }catch{
+                chicken = '🐥'
+            }
+            const egg = await fetchEgg(chicken)
+            return fryEgg(egg)
+        }
+
+        makeFriedEgg()
+            .then(console.log)
+    </script>
+</body>
+</html>
