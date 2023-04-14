@@ -22,7 +22,11 @@ function clicktab(select) {
     let location = document.getElementById(select);
     location.classList.add("selected");
 
+    let all = document.querySelectorAll('category__btn');
+    let values = document.querySelectorAll("work__projects");
 }
+
+
 
 const btn = document.getElementsByClassName("arrow-up");
 window.addEventListener("scroll", () => {
