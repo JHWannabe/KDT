@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,24 +13,26 @@
     <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/133260cff9.js"></script>
 </head>
+
 <body>
     <!-- Navbar 시작 -->
     <nav id="navbar">
         <div class="navbar__logo">
             <i class="fa-brands fa-space-awesome fa-bounce"></i>
-            <a href="#">JHWannabe</a>
+            <a href="#" style="color: var(--color-white);">JHWannabe</a>
         </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item active">HOME</li>
-            <li class="navbar__menu__item">INTRODUCE</li>
-            <li class="navbar__menu__item">SKILLSTACK</li>
-            <li class="navbar__menu__item">PROJECT</li>
-            <li class="navbar__menu__item">RECOMMEND</li>
-            <li class="navbar__menu__item">CONTACT</li>
+        <ul class="navbar__menu" id="navbar__menu">
+            <li class="navbar__menu__item active" id="mn_home" onclick="goToScroll('home')">HOME</li>
+            <li class="navbar__menu__item" id="mn_about" onclick="goToScroll('about')">INTRODUCE</li>
+            <li class="navbar__menu__item" id="mn_skills" onclick="goToScroll('skills')">SKILLSTACK</li>
+            <li class="navbar__menu__item" id="mn_work" onclick="goToScroll('work')">MY WORKSPACE</li>
+            <li class="navbar__menu__item" id="mn_testimonials" onclick="goToScroll('testimonials')">RECOMMENDATION</li>
+            <li class="navbar__menu__item" id="mn_contact" onclick="goToScroll('contact')">CONTACT</li>
         </ul>
+        
         <!-- 버튼 시작 -->
-        <button class="navbar__toggle-btn">
-            <i class="fa-solid fa-toggle-off"></i>
+        <button class="navbar__toggle-btn" onclick="openClose()">
+            <img src="images/hamburger.png" alt="" style="background-color: rgb(106, 106, 196);">
         </button>
     </nav>
     <!-- Navbar 끝 -->
@@ -43,6 +46,385 @@
         </div>
     </section>
     <!-- Home 끝 -->
-    
+    <!-- Introduce 시작 -->
+    <section id="about" class="section section__container">
+        <h1>INTRODUCE</h1>
+        <p>
+        <table style="margin: 0 auto;">
+            <tr>
+                <td rowspan="5" width="200" align="center"><img src="images/profile.png" alt="프로필" height="240"></td>
+            </tr>
+            <tr>
+                <td width="100" rowspan="2" align="center" bgcolor="lightgray">
+                    <h4>성 명</h4>
+                </td>
+                <td width="250">&nbsp;(한글) 전 장 훈</td>
+                <td width="100" align="center" bgcolor="lightgray">
+                    <h4>생 년 월 일</h4>
+                </td>
+                <td width="250">&nbsp;1999년 01월 11일생 (만 24세)</td>
+
+            </tr>
+            <tr>
+                <td>&nbsp;(영문) Chun Jang Hoon</td>
+                <td align="center" bgcolor="lightgray">
+                    <h4>연 락 처</h4>
+                </td>
+                <td>&nbsp;010-8887-3067</td>
+            </tr>
+            <tr>
+                <td height="50" align="center" bgcolor="lightgray">
+                    <h4>E-mail</h4>
+                </td>
+                <td colspan="3" align="center">jhjun0328@naver.com</td>
+            </tr>
+            <tr>
+                <td height="50" align="center" bgcolor="lightgray">
+                    <h4>주&nbsp;&nbsp;&nbsp;소</h4>
+                </td>
+                <td colspan="3" align="center">서울특별시 서초구 탑성말1길 12 (06798)</td>
+            </tr>
+            <tr>
+                <td height="50" colspan="5" align="center" bgcolor="lightgray">
+                    <h3>포 트 폴 리 오 &nbsp;및&nbsp; 링 크</h3>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center"><b>Github</b></td>
+                <td colspan="3" align="center"><a href="https://github.com/JHWannabe/"
+                        style="color:black">https://github.com/JHWannabe/</a>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center"><b>Blog</b></td>
+                <td colspan="3" align="center"><a href="https://jhwannabe.tistory.com/"
+                        style="color:black">https://jhwannabe.tistory.com/</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" align="center" bgcolor="lightgray">
+                    <h3>학 력 사 항</h3>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" align="center"><b>기 간 (년, 월)</b></td>
+                <td colspan="2" align="center"><b>학 교 명</b></td>
+                <td colspan="2" align="center"><b>전 공 (학 과)</b></td>
+            </tr>
+            <tr>
+                <td height="40" align="center">2018.03 - 2021.02</td>
+                <td colspan="2" align="center">삼 육 대 학 교</td>
+                <td colspan="2" align="center">컴퓨터메카트로닉스공학부 소프트웨어전공</td>
+            </tr>
+            <tr>
+                <td height="40" align="center">2021.03 - 2023.02</td>
+                <td colspan="2" align="center">아 주 대 학 교</td>
+                <td colspan="2" align="center">소프트웨어학과</td>
+            </tr>
+            <tr>
+                <td colspan="5" align="center" bgcolor="lightgray">
+                    <h3>어 학 능 력 &nbsp;및&nbsp; 자 격 증</h3>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" align="center"><b>종 류</b></td>
+                <td align="center"><b>자 격 증 명</b></td>
+                <td align="center"><b>시 험 점 수 / 취 득 일 시</b></td>
+                <td align="center"><b>자 격 증 명</b></td>
+                <td align="center"><b>시 험 점 수 / 취 득 일 시</b></td>
+            </tr>
+            <tr>
+                <td height="40" align="center">어 학</td>
+                <td align="center">TOEIC</td>
+                <td align="center">705점 / 2022.12</td>
+                <td align="center">OPIC</td>
+                <td align="center">IM1 / 2023.01</td>
+            </tr>
+            <tr>
+                <td height="40" align="center">컴퓨터</td>
+                <td align="center">ADsP</td>
+                <td align="center">2022.06</td>
+                <td align="center">SQLD</td>
+                <td align="center">2023.03</td>
+            </tr>
+        </table>
+        </p>
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon">
+                    <img src="images/fe.png" alt="fe">
+                </div>
+                <div>
+                    <h2 class="major__title">Front-End</h2>
+                    <p class="major__description">HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+
+            <div class="major">
+                <div class="major__icon">
+                    <img src="images/be.png" alt="be">
+                </div>
+                <div>
+                    <h2 class="major__title">Back-End</h2>
+                    <p class="major__description">Node.js, MySQL, PostgreSQL</p>
+                </div>
+            </div>
+
+            <div class="major">
+                <div class="major__icon">
+                    <img src="images/programming.png" alt="programming">
+                </div>
+                <div>
+                    <h2 class="major__title">PROGRAMMING</h2>
+                    <p class="major__description">C, C#, JAVA, Python</p>
+                </div>
+            </div>
+
+            <div class="major">
+                <div class="major__icon">
+                    <img src="images/ai.png" alt="ai">
+                </div>
+                <div>
+                    <h2 class="major__title">AI</h2>
+                    <p class="major__description">Keras, Tensorflow, Pytorch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Introduce 끝 -->
+    <!-- skill 시작 -->
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>SKILL</h1>
+            <p style="text-align: justify;">기계학습 전공수업을 들으면서 팀 프로젝트로 졸음운전 방지 프로젝트를 진행했습니다. 저는 그 프로젝트에서 웹캠을 이용하여 실시간으로 눈을
+                탐지하고 양쪽 눈의 이미지를 저장하는 모델을 개발했다. 처음에는 이미지를 다루는 것이기에 opencv를 이용하여 모델 개발을 했다. 하지만 이 모델을 실행했을 때, 뜬 눈은 잘
+                감지했지만, 감은 눈에 대해서는 모델이 감지하지 못하는 문제점이 발생했습니다. 여러 논문 조사와 자료 검색을 통해 dlib를 사용하면 어느 정도 해결할 수 있다 하여, 전면적으로 모델
+                수정을 했고 수정한 모델을 실행한 결과 문제 해결을 했습니다.<br><br>
+                Computer Vision 쪽의 GAN 모델을 사용하여 간단한 프로젝트를 진행한 경험이 있습니다. 4개월 동안 GAN에 관한 논문 조사와 여러 방면의 코드 분석을 통해서 남들보다
+                GAN에 대하여 많이 알고 있다고 생각합니다. 그리고 졸음운전 탐지 모델을 팀 프로젝트로 개발한 경험도 있습니다. 이 프로젝트에서는 눈을 인식하는 모델을 구현하였습니다. 최종적인 목표가
+                빅데이터, AI에 관련한 직종을 갖는 것이기에 SQL과 python에 조금 더 강점이 있다고 볼 수 있으나 아직 기술적으로는 많이 부족한 부분이 사실입니다. 하지만 배우고자 하는
+                열정만큼은 넘쳐 나 금방 배우고 습득할 수 있는 능력을 갖췄다고 생각합니다. 인공지능에 관한 지식은 학교 전공뿐만 아니라 외부 컴퓨터 학원으로부터 6개월 과정의 강의를 통해서 배운 경험이
+                있습니다.<br><br>
+                웹 프로그래밍은 팀 프로젝트로 카카오 지도 API를 이용하여 자전거 전용 내비게이션을 구현을 진행하였는데 이때 저의 담당은 Front-End였습니다. 다음엔 데이터베이스를 들으면서
+                SQL과 JS를 이용하여 PIN이라는 프로젝트를 제작한 경험이 있습니다. 이 프로젝트에서는 Back-End 담당을 맡아서 제작했습니다. 이러한 경험을 통해 미비하지만, Front와
+                Back을 둘 다 제작을 해봤습니다.</p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="sillset__title">Language</h3>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Python</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>JavaScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>DBMS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>데이터분석</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>ML/DL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>VS Code</span></li>
+                            <li><span>Google Colaboratory</span></li>
+                            <li><span>Pycham</span></li>
+                            <li><span>Jupyter Notebook</span></li>
+                            <li><span>Github Desktop</span></li>
+                        </ul>
+                    </div>
+                    <div class="etc">
+                        <h3 class="skillset_title">ETC</h3>
+                        <ul class="etc__list">
+                            <li><span>Math</span></li>
+                            <li><span>Music</span></li>
+                            <li><span>Run</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skill 끝 -->
+    <!-- project 시작 -->
+    <section id="work" class="section">
+        <div class="section__container">
+            <h1>MY WORKSPACE</h1>
+            <h3>PROJECT</h3>
+            <div class="work__categories">
+                <button class="category__btn selected" id="total" onclick="clicktab('total')">
+                    전체 <span class="category__count">10</span>
+                </button>
+                <button class="category__btn" id="fe" onclick="clicktab('fe')">
+                    FrontEnd <span class="category__count">2</span>
+                </button>
+                <button class="category__btn" id="be"  onclick="clicktab('be')">
+                    BackEnd <span class="category__count">3</span>
+                </button>
+                <button class="category__btn" id="ai"  onclick="clicktab('ai')">
+                    AI <span class="category__count">5</span>
+                </button>
+            </div>
+            <div class="work__projects">
+                <a href="#" class="project fe" target="_blank">
+                    <img src="./images/tripway.png" alt="유튜브메인" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project fe" target="_blank">
+                    <img src="./images/tripway.png" alt="에어베앤비메인" class="project__img">
+                    <div class="project__description">
+                        <h3>Airbnb Clone Coding</h3>
+                        <span>에어비앤비와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project be" target="_blank">
+                    <img src="./images/tripway.png" alt="마켓컬리 백엔드" class="project__img">
+                    <div class="project__description">
+                        <h3>마켓컬리 Clone Coding</h3>
+                        <span>마켓컬리 데이터 분석</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/tripway.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/tripway.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project be" target="_blank">
+                    <img src="./images/tripway.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/tripway.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project be" target="_blank">
+                    <img src="./images/tripway.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/tripway.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/tripway.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Clone Coding</h3>
+                        <span>유튜브와 너무 똑같아서 헷갈림</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- project 끝 -->
+    <!-- recommend 시작 -->
+    <section id="testimonials" class="section">
+        <div class="section__container">
+            <h1>RECOMMEDATION</h1>
+            <h3>이분들이 저를 보고 짱 먹으라고 했어요!</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="images/topeds.jpg" alt="topeds" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                        <p>전장훈님은 저희 회사에서 프론트엔드 개발자로 일한 적이 있습니다. 그는 열정적이고 창의적이며 뛰어난 문제 해결 능력을 갖추고 있습니다. 그의 커뮤니케이션 능력은 매우
+                            뛰어나며, 고객 및 팀원과의 관계를 유지하는 데 큰 기여를 하였습니다.</p>
+                        <p class="name"><a href="#">Mr.Chun</a> / TopEDS</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="images/openai.png" alt="topeds" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                        <p>전장훈님은 저희 프로젝트에서 우수한 작업을 수행했습니다. 항상 일을 할 때 최선을 다하고 팀원들과 협력하여 프로젝트를 성공적으로 완료하는 데 큰 도움을 주었습니다.
+                            그의 코드는 항상 깨끗하고 효율적이며, 다른 개발자들도 쉽게 이행할 수 있었습니다.</p>
+                        <p class="name"><a href="#">Mr.Chatgpt</a> / OpenAI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- recommend 끝 -->
+    <!-- Contact 시작 -->
+    <section id="contact" class="section">
+        <h1 class="contact__title">CONTACT ME</h1>
+        <h2 class="contact__email">jhjun0328@naver.com</h2>
+        <div class="contact__links">
+            <a href="https://github.com/JHWannabe" target="_blank">
+                <img src="images/github.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/bestcoin.01.11/" target="_blank">
+                <img src="images/instagram.png" alt="">
+            </a>
+        </div>
+        <p class="contact__rights">
+            2023 JHWannabe - All rights reserved
+        </p>
+    </section>
+    <!-- Contact 끝 -->
+    <button class="arrow-up" onclick="window.scrollTo(0,0)">
+        <a href="#navbar"><img src="images/arrow.png" alt="위로가기"></a>
+    </button>
 </body>
+
 </html>
