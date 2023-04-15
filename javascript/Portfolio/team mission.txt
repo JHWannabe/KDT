@@ -2,5 +2,7 @@
 2. 각 메뉴를 누를 때 슬라이딩되어 해당 section으로 이동(책갈피 x) (O)
     - 해당 메뉴가 선택되었다라는 표시하기 (O)
 3. 프로젝트의 각 탭에 프로젝트 개수 표시하기 (O)
-    - 탭을 누르면 해당 탭에 프로젝트만 표시하기 (https://kkn1125.github.io/javascript-category-filter/)
+    - 탭을 누르면 해당 탭에 프로젝트만 표시하기
+    (https://kkn1125.github.io/javascript-category-filter/)
+    (https://www.twolinecode.com/#contact)
 4. 홈을 벗어나면 화살표버튼이 활성화되고 화살표 버튼을 누르면 홈으로 이동 (O)

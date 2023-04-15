@@ -21,7 +21,6 @@ function clicktab(select) {
     }
     let location = document.getElementById(select);
     location.classList.add("selected");
-
 }
 
 const btn = document.getElementsByClassName("arrow-up");
