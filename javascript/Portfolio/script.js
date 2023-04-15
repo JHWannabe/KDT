@@ -22,9 +22,29 @@ function clicktab(select) {
     let location = document.getElementById(select);
     location.classList.add("selected");
 
-    let all = document.querySelectorAll('category__btn');
-    let values = document.querySelectorAll("work__projects");
+
+    const all = document.querySelectorAll("[data-group]");
+    const values = document.querySelectorAll("[data-value]");
+
+    values.forEach((el) => {
+        el.addEventListener("click", function (event) {
+            const val = event.target.dataset.value;
+            [...all].forEach((el) => {
+            let arr = el.dataset.group.split(" ")
+            for (let a of arr) {
+                if (a == val) {
+                    console.log(a)
+                    el.setAttribute("class", "project")
+                    break
+                } else {
+                    el.setAttribute("class", "project invisible")
+                }
+            }
+            })
+        })
+    })
 }
+
 
 
 
