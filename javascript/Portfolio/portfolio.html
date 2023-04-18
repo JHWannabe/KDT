@@ -9,8 +9,8 @@
     <meta name="auther" content="JHWannabe">
     <meta name="description" content="전장훈의 포오트 폴리오">
     <link rel="icon" type="images/png" href="./images/space.png">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./portfolio.css">
+    <script src="./portfolio.js" defer></script>
     <script src="https://kit.fontawesome.com/133260cff9.js"></script>
 </head>
 
@@ -21,17 +21,20 @@
             <i class="fa-brands fa-space-awesome fa-bounce"></i>
             <a href="#" style="color: var(--color-white);">JHWannabe</a>
         </div>
-        <ul class="navbar__menu" id="navbar__menu">
-            <li class="navbar__menu__item active" id="mn_home" onclick="goToScroll('home')">HOME</li>
-            <li class="navbar__menu__item" id="mn_about" onclick="goToScroll('about')">INTRODUCE</li>
-            <li class="navbar__menu__item" id="mn_skills" onclick="goToScroll('skills')">SKILLSTACK</li>
-            <li class="navbar__menu__item" id="mn_work" onclick="goToScroll('work')">MY WORKSPACE</li>
-            <li class="navbar__menu__item" id="mn_testimonials" onclick="goToScroll('testimonials')">RECOMMENDATION</li>
-            <li class="navbar__menu__item" id="mn_contact" onclick="goToScroll('contact')">CONTACT</li>
-        </ul>
-        
+        <div class="menu-container" id="nav__menu">
+            <ul class="navbar__menu" id="navbar__menu">
+                <li class="navbar__menu__item active" id="mn_home" onclick="goToScroll('home')">HOME</li>
+                <li class="navbar__menu__item" id="mn_about" onclick="goToScroll('about')">INTRODUCE</li>
+                <li class="navbar__menu__item" id="mn_skills" onclick="goToScroll('skills')">SKILLSTACK</li>
+                <li class="navbar__menu__item" id="mn_work" onclick="goToScroll('work')">MY WORKSPACE</li>
+                <li class="navbar__menu__item" id="mn_testimonials" onclick="goToScroll('testimonials')">RECOMMENDATION
+                </li>
+                <li class="navbar__menu__item" id="mn_contact" onclick="goToScroll('contact')">CONTACT</li>
+            </ul>
+        </div>
+
         <!-- 버튼 시작 -->
-        <button class="navbar__toggle-btn" onclick="openClose()">
+        <button class="navbar__toggle-btn">
             <img src="images/hamburger.png" alt="">
         </button>
     </nav>
@@ -47,107 +50,10 @@
     </section>
     <!-- Home 끝 -->
     <!-- Introduce 시작 -->
-    <section id="about" class="section section__container">
+    <section id="about" class="section">
         <h1>INTRODUCE</h1>
         <p>
-        <table style="margin: 0 auto;">
-            <tr>
-                <td rowspan="5" width="200" align="center"><img src="images/profile.png" alt="프로필" height="240"></td>
-            </tr>
-            <tr>
-                <td width="100" rowspan="2" align="center" bgcolor="lightgray">
-                    <h4>성 명</h4>
-                </td>
-                <td width="250">&nbsp;(한글) 전 장 훈</td>
-                <td width="100" align="center" bgcolor="lightgray">
-                    <h4>생 년 월 일</h4>
-                </td>
-                <td width="250">&nbsp;1999년 01월 11일생 (만 24세)</td>
-
-            </tr>
-            <tr>
-                <td>&nbsp;(영문) Chun Jang Hoon</td>
-                <td align="center" bgcolor="lightgray">
-                    <h4>연 락 처</h4>
-                </td>
-                <td>&nbsp;010-8887-3067</td>
-            </tr>
-            <tr>
-                <td height="50" align="center" bgcolor="lightgray">
-                    <h4>E-mail</h4>
-                </td>
-                <td colspan="3" align="center">jhjun0328@naver.com</td>
-            </tr>
-            <tr>
-                <td height="50" align="center" bgcolor="lightgray">
-                    <h4>주&nbsp;&nbsp;&nbsp;소</h4>
-                </td>
-                <td colspan="3" align="center">서울특별시 서초구 탑성말1길 12 (06798)</td>
-            </tr>
-            <tr>
-                <td height="50" colspan="5" align="center" bgcolor="lightgray">
-                    <h3>포 트 폴 리 오 &nbsp;및&nbsp; 링 크</h3>
-                </td>
-            </tr>
-            <tr>
-                <td height="40" colspan="2" align="center"><b>Github</b></td>
-                <td colspan="3" align="center"><a href="https://github.com/JHWannabe/"
-                        style="color:black">https://github.com/JHWannabe/</a>
-                </td>
-            </tr>
-            <tr>
-                <td height="40" colspan="2" align="center"><b>Blog</b></td>
-                <td colspan="3" align="center"><a href="https://jhwannabe.tistory.com/"
-                        style="color:black">https://jhwannabe.tistory.com/</a>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="5" align="center" bgcolor="lightgray">
-                    <h3>학 력 사 항</h3>
-                </td>
-            </tr>
-            <tr>
-                <td height="40" align="center"><b>기 간 (년, 월)</b></td>
-                <td colspan="2" align="center"><b>학 교 명</b></td>
-                <td colspan="2" align="center"><b>전 공 (학 과)</b></td>
-            </tr>
-            <tr>
-                <td height="40" align="center">2018.03 - 2021.02</td>
-                <td colspan="2" align="center">삼 육 대 학 교</td>
-                <td colspan="2" align="center">컴퓨터메카트로닉스공학부 소프트웨어전공</td>
-            </tr>
-            <tr>
-                <td height="40" align="center">2021.03 - 2023.02</td>
-                <td colspan="2" align="center">아 주 대 학 교</td>
-                <td colspan="2" align="center">소프트웨어학과</td>
-            </tr>
-            <tr>
-                <td colspan="5" align="center" bgcolor="lightgray">
-                    <h3>어 학 능 력 &nbsp;및&nbsp; 자 격 증</h3>
-                </td>
-            </tr>
-            <tr>
-                <td height="40" align="center"><b>종 류</b></td>
-                <td align="center"><b>자 격 증 명</b></td>
-                <td align="center"><b>시 험 점 수 / 취 득 일 시</b></td>
-                <td align="center"><b>자 격 증 명</b></td>
-                <td align="center"><b>시 험 점 수 / 취 득 일 시</b></td>
-            </tr>
-            <tr>
-                <td height="40" align="center">어 학</td>
-                <td align="center">TOEIC</td>
-                <td align="center">705점 / 2022.12</td>
-                <td align="center">OPIC</td>
-                <td align="center">IM1 / 2023.01</td>
-            </tr>
-            <tr>
-                <td height="40" align="center">컴퓨터</td>
-                <td align="center">ADsP</td>
-                <td align="center">2022.06</td>
-                <td align="center">SQLD</td>
-                <td align="center">2023.03</td>
-            </tr>
-        </table>
+            <img src="./images/introduce.png" style="text-align: center; width:900px;">
         </p>
         <div class="about__majors">
             <div class="major">
@@ -290,85 +196,90 @@
         <div class="section__container">
             <h1>MY WORKSPACE</h1>
             <h3>PROJECT</h3>
+
             <div class="work__categories">
-                <button class="category__btn selected" id="all" data-value="all" onclick="clicktab('all')">
-                    All <span class="category__count">10</span>
+                <button class="category__btn selected" onclick="ProjectButtonClick('.project', this)">
+                    PROJECT <span class="category__count all__count"></span>
                 </button>
-                <button class="category__btn" id="fe" data-value="fe" onclick="clicktab('fe')">
-                    FrontEnd <span class="category__count">2</span>
+                <button class="category__btn" onclick="ProjectButtonClick('.fe', this)">
+                    FE <span class="category__count fe__count"></span>
                 </button>
-                <button class="category__btn" id="be" data-value="be" onclick="clicktab('be')">
-                    BackEnd <span class="category__count">3</span>
+                <button class="category__btn" onclick="ProjectButtonClick('.be', this)">
+                    BE <span class="category__count be__count"></span>
                 </button>
-                <button class="category__btn" id="ai" data-value="ai" onclick="clicktab('ai')">
-                    AI <span class="category__count">5</span>
+                <button class="category__btn" onclick="ProjectButtonClick('.ai', this)">
+                    AI <span class="category__count ai__count"></span>
                 </button>
             </div>
+
             <div class="work__projects">
-                <a href="#" class="project" target="_blank" data-group="all fe">
+
+                <a href="#" class="project fe" target="_blank">
                     <img src="./images/tripway.png" alt="유튜브메인" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
                         <span>유튜브와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all be">
+
+                <a href="#" class="project be" target="_blank">
                     <img src="./images/naver.png" alt="에어베앤비메인" class="project__img">
                     <div class="project__description">
                         <h3>Airbnb Clone Coding</h3>
                         <span>에어비앤비와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all be">
+
+                <a href="#" class="project be" target="_blank">
                     <img src="./images/naver.png" alt="마켓컬리 백엔드" class="project__img">
                     <div class="project__description">
                         <h3>마켓컬리 Clone Coding</h3>
                         <span>마켓컬리 데이터 분석</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all ai">
+                <a href="#" class="project ai" target="_blank">
                     <img src="./images/musi.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
                         <span>유튜브와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all ai">
+                <a href="#" class="project ai" target="_blank">
                     <img src="./images/musi.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
                         <span>유튜브와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all ai">
+                <a href="#" class="project ai" target="_blank">
                     <img src="./images/musi.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
                         <span>유튜브와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all be">
+                <a href="#" class="project be" target="_blank">
                     <img src="./images/naver.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
                         <span>유튜브와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all fe">
+                <a href="#" class="project fe" target="_blank">
                     <img src="./images/tripway.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
                         <span>유튜브와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all fe">
+                <a href="#" class="project fe" target="_blank">
                     <img src="./images/tripway.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
                         <span>유튜브와 너무 똑같아서 헷갈림</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank" data-group="all ai">
+                <a href="#" class="project ai" target="_blank">
                     <img src="./images/musi.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Clone Coding</h3>
