@@ -117,10 +117,8 @@ a:link, a:visited, a:hover, a:active { color : black; }
     display: inline-block;
     border: 2px solid black;
     box-sizing: border-box;
-
     height: 280px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    margin: 0 6px 20px;
     text-align: center;
 }
 
@@ -128,7 +126,7 @@ div > a > p {
     margin-bottom: 10px;
 }
 
-#clone > a > img, #playground > a > img {
+ a > img {
     padding: 10px;
 }
 
