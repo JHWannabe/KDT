@@ -26,4 +26,12 @@
 
 ## JavaScript
 
-- Day23 ~
+- Day23 ~ Day31
+
+## NodeJS
+
+- Day32 ~ Day37
+
+## Git
+
+- Day38 ~ 
